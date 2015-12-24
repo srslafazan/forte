@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tutor: 
+  skill_level: 
+  instrument: 
+
+two:
+  tutor: 
+  skill_level: 
+  instrument: 

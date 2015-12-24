@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: 
+  tutor: 
+  address: 
+
+two:
+  student: 
+  tutor: 
+  address: 
