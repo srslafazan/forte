@@ -14,12 +14,11 @@
 ActiveRecord::Schema.define(version: 20151224041227) do
 
   create_table "addresses", force: :cascade do |t|
-    t.integer  "tutor_id"
-    t.integer  "student_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["student_id"], name: "index_addresses_on_student_id"
-    t.index ["tutor_id"], name: "index_addresses_on_tutor_id"
+    t.string   "addressable_type"
+    t.integer  "addressable_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -123,8 +122,10 @@ ActiveRecord::Schema.define(version: 20151224041227) do
   end
 
   create_table "students", force: :cascade do |t|
+    t.integer  "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_students_on_address_id"
   end
 
   create_table "time_blocks", force: :cascade do |t|
@@ -149,8 +150,10 @@ ActiveRecord::Schema.define(version: 20151224041227) do
   end
 
   create_table "tutors", force: :cascade do |t|
+    t.integer  "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_tutors_on_address_id"
   end
 
 end

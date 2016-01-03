@@ -2,7 +2,9 @@ class Student < ApplicationRecord
   has_many :dreams
   has_many :mentorships
   has_many :lessons, through: :mentorships
-  has_many :addresses
+
+  belongs_to :address
+  has_many :addresses, :as => :addressable
 
   has_many :instruments, through: :dreams
 
