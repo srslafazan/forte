@@ -8,5 +8,9 @@ class Tutor < ApplicationRecord
   has_many :tutor_availabilities
 
   has_many :time_blocks, through: :tutor_availabilities
+
+  has_many :students
   has_many :students, through: :mentorships
+
+
 end
