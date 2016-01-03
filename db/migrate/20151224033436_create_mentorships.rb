@@ -4,8 +4,7 @@ class CreateMentorships < ActiveRecord::Migration[5.0]
       
       t.references :student, index: true, foreign_key: true
       t.references :tutor, index: true, foreign_key: true
-      t.references :address, index: true, foreign_key: true
-
+      
       t.timestamps
     end
   end

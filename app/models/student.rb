@@ -3,7 +3,6 @@ class Student < ApplicationRecord
   has_many :mentorships
   has_many :lessons, through: :mentorships
 
-  belongs_to :address
   has_many :addresses, :as => :addressable
 
   has_many :instruments, through: :dreams
@@ -13,4 +12,9 @@ class Student < ApplicationRecord
   has_many :student_availabilities
   has_many :time_blocks, through: :student_availabilities
   has_many :tutors, through: :mentorships
+  has_many :lessons, through: :mentorships
+
+  def main_address
+    # ... create query for main_address
+  end
 end
