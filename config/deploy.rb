@@ -1,7 +1,6 @@
-# Change these
-server '54-153-93-218', port: 3000, roles: [:web, :app, :db], primary: true
+server '54.153.93.218', port: 3000, roles: [:web, :app, :db], primary: true
 
-set :repo_url,        'https://github.com/srslafazan/forte.git:srslafazan/forte.git'
+set :repo_url,        'git@github.com:srslafazan/forte.git'
 set :application,     'forte'
 set :user,            'deploy'
 set :puma_threads,    [4, 16]

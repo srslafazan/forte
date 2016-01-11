@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
       redirect_to '/' if session[:email] == nil
   end
   #before_action :require_login, except: [:new, :create] use for students and teachers controller
+
+
   protect_from_forgery with: :exception
 end
