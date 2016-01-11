@@ -1,34 +1,43 @@
 class SessionsController < ApplicationController
   # before_action :require_login, except: [:index, :about, :contact, :involve]
 
-  def index
+  # For page organization information, refer to the Forte Web Structure and Components guide on Slack.
+
+  def index # Home
   end
 
-  def about
+  def about # About Us
   end
 
-  def contact
+  def contact # Contact Us
   end
 
-  def involve
+  def involve # Get Involved
   end
 
-  def finish_profile
+  def finish_profile # Finish your Forte Profile
   end
 
-  def profile
+  def profile # Profile
   end
 
-  def edit_profile
+  def edit_profile # Edit Profile
   end
 
-  def feedback
+  def feedback # Feedback
   end
 
-  def payments
+  def payments # Payments
   end
 
-  def support
+  def support # Support
+  end
+
+
+  # Temporary Pages
+
+  def components
+    # style buttons, links, typography, and other components on this page
   end
 
 end
