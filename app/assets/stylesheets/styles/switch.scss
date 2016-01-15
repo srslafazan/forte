@@ -1,0 +1,109 @@
+// SWITCH COMPONENT
+
+@mixin no-select() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.label-switch { 
+  @include no-select; // mixin to disble text selection
+  $action-color: #8D2131;
+  $base-background-color: white !default;
+  $switch-width: 150px; // affects width
+  $switch-padding: 2px;
+  $switch-height: 32px;
+  $switch-radius: 2px;
+  $knob-size: $switch-height - ($switch-padding * 2);
+  $knob-radius: 2px;
+  $knob-width: $knob-size * 2.5 + 2px; // affects width
+  $switch-background: $base-background-color;
+  $switch-border-background: darken($base-background-color, 9%);
+  $switch-shadow: 0 2px 5px transparentize(black, 0.6);
+
+  border-radius: $switch-radius;
+  cursor: pointer;
+  display: inline-block;
+  height: $switch-height;
+  position: relative;
+  width: $switch-width;
+
+  input[type="checkbox"] {
+    display: none;
+
+    + .checkbox {
+      @include transition(all 0.3s ease);
+      // background: $switch-border-background; // background is maroon on both sides
+      background: $action-color;
+      border-radius: $switch-radius;
+      border: none;
+      cursor: pointer;
+      height: $switch-height;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: $switch-width;
+      z-index: 0;
+
+      &:before {
+        @include position(absolute, 2px 0 0 2px);
+        @include transform(scale(1));
+        @include transition(all 0.3s ease);
+        background: $switch-background;
+        background-color: $switch-border-background;
+        border-radius: $switch-radius;
+        content: "";
+        height: $knob-radius;
+        width: $switch-width - ($switch-padding * 2);
+        z-index: 1;
+        width: $switch-width / 2 - ($switch-padding * 2); // affects width
+      }
+
+      &:after {
+        @include position(absolute, 2px 0 0 2px);
+        @include transition(all 0.3s ease);
+        @include size($knob-size);
+        background: $switch-background;
+        border-radius: $knob-radius;
+        box-shadow: $switch-shadow;
+        content: "";
+        z-index: 2;
+        width: $switch-width / 2 - ($switch-padding * 2); // affects width
+      }
+    }
+
+    &:checked {
+      + .checkbox {
+        background: $action-color;
+        &:before {
+          @include transform(scale(0));
+        }
+        &:after {
+          left: $switch-width - $knob-width - ($switch-padding);
+        }
+      }
+    }
+  }
+}
+
+.switch-label {
+  font-size: 0.8rem;
+  color: white;
+  @include no-select; // mixin to disable text selection
+}
+.switch-label-student {
+  float: left;
+  height: 16px;
+  margin: 6px 0 0 14px;
+}
+
+.switch-label-teacher {
+  float: right;
+  height: 16px;
+  margin: 6px 14px 0 0;
+}
+
+
