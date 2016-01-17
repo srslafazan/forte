@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Forte</title>
+<head>
+    <title>Forte Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+</head>
+<body>
+    <header>
+        <!-- forte logo -->
+        <div class="header_logo">
+            <%= image_tag('logo_sample.gif')%>
+        </div>
+        <!-- teacher or student tag -->
+        <nav>
+            <ul class="desktop_menu">
+                <!-- change menu items when logged in and not -->
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/register">Get Involved</a></li>
+                <li><a href="/login">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <%= yield %>
+    </main>
+    <footer></footer>
+</body>
 </html>

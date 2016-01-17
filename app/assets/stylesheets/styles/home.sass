@@ -1,0 +1,72 @@
+$primary-color: #821932
+div
+    h1
+        color: $primary-color
+        font-size: 1.5em
+        font-weight: normal
+    p
+        color: #545454
+        font-size: 1.1em
+#giphy_carousel
+    height: 500px
+    width: 100%
+    background-image: url('giphy1.gif')
+    background-repeat: no-repeat
+    background-size: cover
+    @include media(max-width 768px)
+        height: 350px
+#shout_out
+    position: relative
+    margin-top: 160px
+    background-color: rgba(156, 35, 68, .5)
+    padding: 20px
+    @include span-columns(6)
+    @include shift(3)
+    @include media(max-width 768px)
+        margin-top: 40px
+        @include span-columns(8)
+        @include shift(2)
+    h1
+        @include media(max-width 768px)
+            font-size: 1.2em
+        font-size: 1.6em
+        color: white
+        font-weight: 300
+        text-align: center
+    a
+        @include span-columns(2 of 6)
+        @include media(max-width 768px)
+            @include span-columns(4 of 8)
+        color: white
+        border: 1px solid white
+        padding: 5px 15px
+        text-align: center
+    .first
+        @include shift(1 of 6)
+        @include media(max-width 768px)
+            @include shift(0)
+#triangle
+    width: 0
+    height: 0
+    margin: 0px auto
+    border-left: 50px solid transparent
+    border-right: 50px solid transparent
+    border-top: 25px solid $primary-color
+.content
+    @include span-columns(10)
+    @include shift(1)
+    margin-bottom: 100px
+    .info
+        @include span-columns(4)
+        @include media(max-width 768px)
+            @include span-columns(12)
+            margin: 20px 0px
+    .instruments
+        height: 200px
+        width: auto
+        margin: 80px 0px
+        background-color: rgb(18, 115, 92)
+        padding-top: 20px
+        h2
+            text-align: center
+            font-size: 1.5em

@@ -1,3 +1,36 @@
 // use sass: http://sass-lang.com/
 
 @import 'components'
+$primary-color: #821932
+header
+    background-color: $primary-color
+    height: 100px
+    width: 100%
+    padding: 20px 30px
+    .header_logo
+        @include span-columns(6)
+        @include media(769px)
+            @include span-columns(3)
+        text-align: left
+    img
+        width: 150px
+        height: auto
+    nav
+        .desktop_menu
+            display: inline-block
+            @include span-columns(6)
+            @include media(769px)
+                @include span-columns(9)
+            @include media(max-width 768px)
+                display: none
+            text-align: right
+            li
+                display: inline-block
+                margin: 10px
+                font-weight: lighter
+                font-size: 1.1em
+                a
+                    color: white
+            li:nth-child(3n)
+                border: 1px solid white
+                padding: 5px 15px
