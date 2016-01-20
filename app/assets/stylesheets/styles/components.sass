@@ -5,6 +5,17 @@
 @import 'libraries/base/base'
 @import 'forte-global-variables'
 
+=forte-button
+	background-color: $forte-white
+	border: $forte-border-maroon
+	border-radius: $forte-border-radius
+	color: $forte-maroon
+	font-size: $base-font-size * 0.9
+	font-weight: $forte-font-weight + 100
+	&:hover
+		color: $forte-maroon
+		background-color: $forte-light-maroon
+
 html
 
 body
@@ -51,16 +62,8 @@ a
 		color: $forte-maroon
 
 button
-	background-color: $forte-white
-	border: $forte-border-maroon
-	border-radius: $forte-border-radius
-	color: $forte-maroon
-	font-size: $base-font-size * 0.9
-	font-weight: $forte-font-weight + 100
+	+forte-button
 
-	&:hover
-		color: $forte-maroon
-		background-color: $forte-light-maroon
 	&.forte-button-gray
 		border: $forte-border-dark-gray
 		color: $forte-dark-gray
@@ -120,12 +123,53 @@ ol
 	list-style: decimal inside none
 
 form
+	input
+		max-width: 200px
+
+	input[type=checkbox]
+		visibility: hidden
+
+	input[type=submit]
+		+forte-button
+
+	textarea
+		height: 200px
+		width: 800px
+		display: block
+
+.forte-checkbox
+	label
+		display: inline-block
+	.forte-checkbox-square
+		border-radius: $forte-border-radius - 1
+		width: 24px
+		height: 24px
+		background-color: $forte-gray
+		margin: 5px
+		position: relative
+		display: inline-block
+	.forte-checkbox-square label
+		cursor: pointer
+		position: absolute
+		width: 20px
+		height: 20px
+		left: 2px
+		top: 2px
+		background-color: $forte-white
+	.forte-checkbox-square label:after
+		opacity: 0
+		content: ''
+		position: absolute
+		width: 20px
+		height: 20px
+		background-color: $forte-gray
+		top: 0px
+		left: 0px
+	.forte-checkbox-square label:hover::after
+	.forte-checkbox-square input[type=checkbox]:checked + label:after
+		background-color: $forte-maroon
+		opacity: 1
 
 section
 
 article
-	
-
-
-
-
