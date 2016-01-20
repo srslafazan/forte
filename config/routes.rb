@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # Temporary pages
   get 'components' => 'sessions#components'
-
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Serve websocket cable requests in-process

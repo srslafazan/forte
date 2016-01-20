@@ -1,15 +1,21 @@
 // Bourbon documentation: https://github.com/thoughtbot/bourbon
 @import 'bourbon';
 @import 'libraries/base/base';
-@import "neat";
+@import 'neat';
 
-// styles
-@import 'styles/pages';
+// STYLES
+@import 'styles/components';
 @import 'styles/switch';
-@import "styles/pages";
-@import "styles/home";
+@import 'styles/pages';
+@import 'styles/home';
+@import 'styles/about';
 
+@import 'styles/partials/header-nav';
+
+// TODO : add NormalizeCSS
 *{
     margin: 0px;
     padding: 0px;
+    border: 0;
 }
+

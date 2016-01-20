@@ -1,0 +1,61 @@
+// use sass: http://sass-lang.com/
+
+header
+    background-color: $forte-maroon
+    height: $forte-header-nav-height
+    min-height: 85px
+    width: 100%
+    padding: 0 1vw 0 1vw
+    .header_logo
+        margin: 0
+        float: left
+        display: inline
+        // @include span-columns(6)
+        // @include media(769px)
+            // @include span-columns(3)
+        // text-align: left
+    img
+        width: 170px
+        height: 75px
+
+    // nav
+    //     .desktop_menu
+    //         display: inline-block
+    //         @include span-columns(6)
+    //         @include media(769px)
+    //             @include span-columns(9)
+    //         @include media(max-width 768px)
+    //             display: none
+    //         text-align: right
+    //         li
+    //             display: inline-block
+    //             margin: 10px
+    //             font-weight: lighter
+    //             font-size: 1.1em
+    //             a
+    //                 color: white
+    //         li:nth-child(3n)
+    //             border: 1px solid white
+    //             padding: 5px 15px
+
+
+ul.forte-nav
+    height: 25px
+    margin: 30px auto
+    @include media($media-tiny)
+        display: none
+    @include media ($media-small)
+        &.forte-nav > li
+            &:nth-child(2)
+                display: none
+            font-size: $base-font-size * 1.0             
+    @include media($media-medium)
+        &.forte-nav > li
+            font-size: $base-font-size * 1.0
+    @include media($media-large)
+        display: initial
+        &.forte-nav > li
+            font-size: $base-font-size * 1.2
+    @include media($media-huge)
+        &.forte-nav > li
+            font-size: $base-font-size * 1.3

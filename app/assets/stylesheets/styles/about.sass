@@ -1,0 +1,112 @@
+// about.html.erb
+
+$about-us-height: 90vh
+
+#about-us-left
+	background-color: $forte-white
+	height: $about-us-height
+
+	#about-us-side-nav
+		width: $about-us-height / 3
+		margin: $about-us-height/6 0 0 auto
+		li
+			padding: 1rem auto
+			a
+				font-size: $base-font-size * 1.0						
+				color: $forte-dark-gray
+				text-decoration: none
+				&:hover
+					border-bottom: $forte-border-dark-gray
+
+	@include media($media-tiny)
+		display: none
+	@include media($media-small)
+		display: none
+	@include media($media-medium-up)
+		@include span-columns(3, $display: block-collapse)
+		#about-us-side-nav
+			width: $about-us-height / 3
+			margin: $about-us-height/6 0 0 auto
+			li
+				padding: 1rem
+				a
+					font-size: $base-font-size * 1.0						
+					color: $forte-dark-gray
+					text-decoration: none
+					&:hover
+						border-bottom: $forte-border-dark-gray
+
+#about-us-content
+	height: $about-us-height
+	overflow-y: scroll
+
+	h1,h2,h3,h4,h5,h6
+		&.white
+			color: white
+
+	article 
+		background-color: $forte-maroon
+		padding: 4rem
+		min-height: $about-us-height
+		&.about-us-article-team
+			background-color: $forte-white
+			
+			@include media($media-tiny)
+				.forte-team-tile
+					.team-tile-title
+						font-size: $base-font-size * 1.0
+
+			@include media($media-small)
+				.forte-team-tile
+					height: auto
+					overflow: none
+					.team-tile-title
+						font-size: $base-font-size * 1.1
+
+			@include media($media-medium-up)
+				.forte-team-tile
+					height: 250px
+					img
+						@include span-columns(3)
+						display: inline-block
+					div
+						@include span-columns(9)
+						float: right
+						display: inline-block
+						vertical-align: top
+						.team-tile-title
+							color: orange
+							display: inline-block
+							font-size: $base-font-size * 1.1
+
+	#about-us-get-involved
+		margin: 0 auto 1rem auto
+		p, ul
+			display: inline
+			li
+				display: inline
+				margin: 10px
+
+		@include media($media-tiny)
+			p
+				display: block
+			ul
+				display: block
+
+		@include media($media-small)
+			p
+				display: block
+			ul li 
+				display: block
+
+		@include media($media-medium-up)
+			@include span-columns(12)
+		
+	@include media($media-tiny)
+		@include span-columns(12, $display: block-collapse)
+	@include media($media-small)
+		@include span-columns(12, $display: block-collapse)
+	@include media($media-medium-up)
+		@include span-columns(9, $display: block-collapse)
+
+
