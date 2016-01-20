@@ -48,20 +48,6 @@
       width: $switch-width;
       z-index: 0;
 
-      &:before {
-        @include position(absolute, 2px 0 0 2px);
-        @include transform(scale(1));
-        @include transition(all 0.3s ease);
-        background: $switch-background;
-        background-color: $switch-border-background;
-        border-radius: $switch-radius;
-        content: "";
-        height: $knob-radius;
-        width: $switch-width - ($switch-padding * 2);
-        z-index: 1;
-        width: $switch-width / 2 - ($switch-padding * 2); // affects width
-      }
-
       &:after {
         @include position(absolute, 2px 0 0 2px);
         @include transition(all 0.3s ease);
