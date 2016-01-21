@@ -3,19 +3,18 @@
 @import 'libraries/base/base';
 @import 'neat';
 
-<<<<<<< HEAD
 // STYLES
 @import 'styles/components';
 @import 'styles/switch';
 @import 'styles/pages';
 @import 'styles/home';
 @import 'styles/about';
-=======
+
 // styles
 @import "styles/pages";
 @import "styles/home";
 @import "styles/modal";
->>>>>>> views
+
 
 @import 'styles/partials/header-nav';
 
@@ -25,4 +24,3 @@
     padding: 0px;
     border: 0;
 }
-
