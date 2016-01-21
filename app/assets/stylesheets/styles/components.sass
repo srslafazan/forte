@@ -188,60 +188,12 @@ section
 
 article
 
-.forte-availability-picker
-	@include no-select
-	margin-top: 1rem
-	margin-bottom: 1rem
-	width: 100%
-	@include span-columns(12, $display: block-collapse)
-	.availability-column-left, .availability-column-right
-		@include span-columns(0, $display: block-collapse)
-		height: 450px
-		width: 11%
-		display: inline-block
-	.availability-column-left
-		.availability-cell-label
-			&:first-child
-				height: 40px
-			border: none
-			height: 30px
-			margin: none
-			p
-				font-size: $base-font-size * 0.9
-				height: 30px
-				margin: 0 10px 0 0
-				display: table-cell
-				padding: 5px 0
-				float: right
-
-	.availability-column-right
-		.availability-cell-label
-			&:first-child
-				height: 40px
-			border: none
-			height: 30px
-			margin: none
-			p
-				font-size: $base-font-size * 0.9
-				height: 30px
-				margin: 0 0 0 10px
-				display: table-cell
-				padding: 5px 0
-				float: left
-
-	.availability-column
-		display: inline-block
-		@include span-columns(0, $display: block-collapse)
-		height: 450px
-		width: 11%
-		.availability-cell
-			width: 100%
-			height: 30px
-			border: $forte-medium-gray solid 1px
-			background-color: $forte-white
-			margin: none
-		.availability-cell-highlighted
-			background-color: $forte-maroon
-		
-
-
+div.forte-message-banner
+	h1
+		margin: 2rem 0 0.25rem 0
+	p
+		margin: 0 0 1.25rem 0
+	width: 75%
+	text-align: center	
+	margin: 0 auto
+	border-bottom: $forte-border-maroon

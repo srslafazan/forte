@@ -9,6 +9,7 @@
 @import 'libraries/nice_select';
 
 // UTILITY
+@import 'styles/forte-global-mixins';
 @import 'styles/animations';
 
 // STYLES
@@ -22,6 +23,7 @@
 @import 'styles/involve';
 @import 'styles/contact';
 @import 'styles/finish_profile';
+@import 'styles/profile';
 
 // styles
 @import "styles/pages";
@@ -29,3 +31,4 @@
 @import "styles/modal";
 
 @import 'styles/partials/header-nav';
+@import 'styles/partials/availability-picker';

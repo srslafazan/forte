@@ -1,0 +1,34 @@
+=profile-section
+	margin-top: 1rem
+	@include outer-container
+	height: 325px
+	.profile-tile
+		height: 325px
+		@include span-columns(4)
+		h6
+			border-bottom: $forte-border-maroon
+#profile-section-0, #profile-section-1, #profile-section-2
+	+profile-section
+	.profile-title
+		border-bottom: $forte-border-maroon
+#profile-edit-button
+	float: right
+
+#profile-section-0
+	text-align: center
+	div:first-child
+		height: 3rem
+	#profile-main-image
+		margin: 0 auto 0 auto
+		display: inline-block
+		img
+			margin-top: 1rem
+
+#profile-section-1
+
+#profile-section-2
+	div
+		@include span-columns(8)
+		h6
+		.profile-tile
+			height: 275px
