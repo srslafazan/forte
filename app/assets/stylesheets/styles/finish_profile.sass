@@ -1,0 +1,103 @@
+=finish-section
+	margin-top: 2rem
+	text-align: center
+	height: 400px
+	@include span-columns(12)
+
+#finish-your-profile-form
+	@include outer-container
+	margin-top: 2rem
+
+	@include media($media-large-down)
+		padding: 0 5%
+
+	#profile-section
+		#profile-section-left
+			@include span-columns(3)
+			@include media($media-small-down)
+				@include span-columns(12)
+		#profile-section-right
+			@include span-columns(9)
+			@include media($media-medium)
+				padding-right: 8%
+			@include media($media-large-up)
+				padding-right: 25%
+			@include media($media-small-down)
+				@include span-columns(12)
+.forte-finish-input
+	height: 36px
+	margin: 10px auto
+	position: relative
+	input
+		min-width: 400px
+		@include media($media-large-down)
+			min-width: 300px
+		@include media($media-medium-down)
+			min-width: 200px
+		@include media($media-small-down)
+
+		float: right
+		margin: 0
+	label
+		position: absolute
+		top: 7px
+
+#finish-instruments-you-want-to-learn
+	+finish-section
+
+	#finish-instrument
+		@include span-columns(3, $display: block-collapse)
+		height: 400px
+		// background-color: green
+	#finish-experience
+		@include span-columns(2, $display: block-collapse)
+		height: 400px
+		// background-color: orange
+	#finish-years
+		@include span-columns(2, $display: block-collapse)
+		height: 400px
+		input
+			width: 50px
+		// background-color: purple
+	#finish-select-instruments
+		@include span-columns(5, $display: block-collapse)
+		height: 400px
+		// background-color: red
+		#finish-instrument-search
+			margin: 1rem auto 1rem auto
+
+#finish-home-address
+	+finish-section
+	.input-address
+		min-width: 50%
+		display: block
+		margin: 1rem auto
+
+#finish-mobility-preferences
+	text-align: center
+	#finish-mobility-left
+		@include span-columns(6, $display: block-collapse)
+	#finish-mobility-right
+		@include span-columns(6, $display: block-collapse)
+
+#finish-education
+	+finish-section
+	height: 150px
+#finish-weekly-availabilities
+	+finish-section
+	height: 600px
+#finish-short-answer
+	+finish-section
+	textarea
+		margin: 0 auto
+
+#finish-link-social
+	+finish-section
+	height: 200px
+	h4
+		display: inline
+#finish-save
+	+finish-section
+	height: 200px
+	input
+		margin-right: 10px

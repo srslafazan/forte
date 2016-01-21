@@ -1,2 +1,205 @@
-<h1>Sessions#finish_profile</h1>
-<p>Find me in app/views/sessions/finish_profile.html.erb</p>
+<form action='' method='post' class='forte-form' id='finish-your-profile-form'>
+	
+	<h1>Finish Creating Your Profile</h1>
+	<h6>Your finished profile will be sent to the Forte team for review.</h6>
+		
+	<section id='profile-section'>
+		<div id='profile-section-left'>
+			<img id='finish-profile-image' src="http://placehold.it/150x150" alt='image upload'>
+		</div>
+		<div id='profile-section-right'>
+			<div class='forte-finish-input'>
+				<label class='forte-label'>First Name</label>
+				<input type='text'  name='first_name' class='forte-input' placeholder="First Name">
+			</div>
+			<div class='forte-finish-input'>
+				<label class='forte-label'>Last Name</label>
+				<input type='text'  name='last_name' class='forte-input' placeholder="Last Name">
+			</div>
+			<div class='forte-finish-input'>
+				<label class='forte-label'>Email</label>
+				<input type='text'  name='email' class='forte-input' placeholder="Email">
+			 </div>
+			<div class='forte-finish-input'>
+				<label class='forte-label'>Password</label>
+				<input type='text'  name='password' class='forte-input' placeholder="Password">
+			 </div>
+			<div class='forte-finish-input'>
+				<label class='forte-label'>Re-type Password</label>
+				<input type='text'  name='confirm_password' class='forte-input' placeholder="Re-type Password">
+			</div>
+			<div class='forte-finish-input'>
+				<label class='forte-label'>Phone Number</label>
+				<input type='text'  name='phone' class='forte-input' placeholder="Phone Number">
+			</div>
+			<div class='forte-finish-input'>
+				<label class='forte-label'>Birthdate</label>
+				<input type='text'  name='birthdate' class='forte-input' placeholder="Birthdate">
+			 </div>
+		</div>
+
+	</section>
+
+	<section id='finish-instruments-you-want-to-learn'>
+		<h4>Instrument(s) you want to learn</h4>
+		<div id='finish-instrument'>
+			<h6>Instrument</h6>
+		</div>
+		<div id='finish-experience'>
+			<h6>Experience level</h6>
+
+			<select class='change' name='skill'>
+				<option value="beginner">Beginner</option>
+				<option value="intermediate">Intermediate</option>
+				<option value="advanced">Advanced</option>
+			</select>
+			
+		</div>
+		<div id='finish-years'>
+			<h6>Years played</h6>
+			<input type="text">
+		</div>
+		<div id='finish-select-instruments'>
+			<button>Guitar</button>
+			<button>Clarinet</button>
+			<button>Piano</button>
+			<input type="text" placeholder="Start typing" id='finish-instrument-search'>
+			<p class='forte-p-small'>
+				Enter instruments that you want to learn, but that are currently unavailable on Forte here, so we can improve your experience in the future.
+			</p>
+		</div>
+
+	</section>
+
+	<section id='finish-home-address'>
+		<h4>Home Address</h4>
+		<input class='input-address' type="text" placeholder="Street, apt #">
+
+
+		<input type="text" placeholder="City">
+		
+		<select class='change' name='state' value="state">
+			<option selected="selected">State</option>
+			<option value="CA">CA</option>
+			<option value="MD">MD</option>
+			<option value="WA">WA</option>
+		</select>
+		
+		<input type="text" placeholder="Zipcode">
+	
+	</section>
+
+	<section id='finish-mobility-preferences'>
+		<h4>Mobility Preferences</h4>
+		<h6>Check all that apply</h6>
+
+		<div id='finish-mobility-left'>
+
+			<div class='forte-checkbox'>
+				<label>Lessons to take place at my residence</label>
+				<div class="forte-checkbox-square">
+					<input type="checkbox" value="None" name="check" id="finish-my-residence" />
+					<label for="finish-my-residence"></label>
+				</div>
+			</div>
+
+			<div class='forte-checkbox'>
+				<label>Lessons to take place at my teacher's residence</label>
+				<div class="forte-checkbox-square">
+					<input type="checkbox" value="None" name="check"  id='finish-teacher-residence'/>
+					<label for='finish-teacher-residence'></label>
+				</div>
+			</div>
+
+			<div class='forte-checkbox'>
+				<label>Lessons to take place at schools</label>
+				<div class="forte-checkbox-square">
+					<input type="checkbox" value="None" name="check" id='finish-schools'/>
+					<label for="finish-schools"></label>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div class='finish-mobility-right'>
+
+			<div class='forte-checkbox'>
+				<label>Willing to travel within 10 miles</label>
+				<div class="forte-checkbox-square">
+					<input type="checkbox" value="None" name="check" checked id='finish-10-miles' />
+					<label for="finish-10-miles"></label>
+				</div>
+			</div>
+
+			<div class='forte-checkbox'>
+				<label>Willing to travel within 30 miles</label>
+				<div class="forte-checkbox-square">
+					<input type="checkbox" value="None" name="check" checked id='finish-30-miles'/>
+					<label for="finish-30-miles"></label>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id='finish-education'>
+		<h4>Education</h4>
+		<input type='text' placeholder="School attended"/>
+
+		<select class='change' name='state' value="state">
+			<option selected="selected">Graduation year (expected)</option>
+			<option value="2016">2016</option>
+			<option value="2017">2017</option>
+			<option value="2018">2018</option>
+			<option value="2019">2019</option>
+			<option value="2020">2020</option>
+			<option value="2021">2021</option>
+			<option value="2022">2022</option>
+		</select>
+
+	</section>
+	
+	<section id='finish-weekly-availabilities'>
+		<h4>Weekly Availabilities</h4>
+		<h6>Highlight your available times. You can edit your schedule anytime.</h6>
+
+		<%= render partial: 'partials/availability-picker' %>	
+
+	</section>
+	
+	<section id='finish-short-answer'>
+		<h4>Short Answer</h4>
+		<h6>Tell us about your experience with music and what you hope to achieve with Forte!</h6>
+		<textarea></textarea>
+	</section>
+	
+	<section id='finish-link-social'>
+		<h4>Link your social profiles</h4>
+	</section>
+
+	<section id='finish-save'>
+		<input type='submit' class='forte-submit' value='Save & Finish'>
+		<a href="" class='forte-link-gray'>Cancel</a>
+	</section>
+
+</form>
+
+
+
+
+<script type="text/javascript" >
+	$(document).ready(function(){
+		
+		$('.change').niceselect();
+	
+
+
+	});
+
+
+
+
+
+</script>
