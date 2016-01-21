@@ -6,9 +6,14 @@
 @import 'libraries/base/base';
 @import 'neat';
 
+// UTILITY
+@import 'styles/animations';
+
 // STYLES
 @import 'styles/components';
 @import 'styles/switch';
+@import 'styles/hover-tile';
+
 @import 'styles/pages';
 @import 'styles/home';
 @import 'styles/about';
