@@ -8,13 +8,52 @@ section#get-involved
 	@include media(max-width 768px)
 		height: 350px
 
+	div#get-involved-left
+		position: absolute
+		z-index: 1
+		height: 300px
+		width: 600px
+		top: 25px
+		background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Broadway_tower_grayscale.jpg')
+		display: inline-block
+
+		@include media($media-small-down)
+			@include span-columns(12)
+			display: none
+		@include media($media-medium)
+			@include span-columns(9)
+			left: 6.75%
+
+	div#get-involved-right
+		position: absolute
+		z-index: 1
+		height: 300px
+		width: 600px
+		top: 25px
+		right: 0
+
+		background-image: url('http://darkroom.baltimoresun.com/wp-content/uploads/2012/11/sr-sunshots-grayscale-p1.jpg')
+		display: inline-block
+
+		@include media($media-small-down)
+			@include span-columns(12)
+			display: none
+		@include media($media-medium)
+			@include span-columns(9)
+			left: 6.75%
+
 	div#get-involved-center
 		@include span-columns(6)
+		z-index: 2
 		height: 350px
 		left: 25%
 		background: url('http://www.materials-world.com/shingles/certainteed/customsealdon/images/NickelGray.jpg')
 		margin: 0 auto
 		position: absolute
+
+		-webkit-box-shadow: 0px 0px 200px 10px $forte-white
+		-moz-box-shadow: 0px 0px 200px 10px $forte-white
+		box-shadow: 0px 0px 200px 10px $forte-white
 		
 		@include media($media-small-down)
 			@include span-columns(12)
