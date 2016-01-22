@@ -25,10 +25,46 @@
 			margin-top: 1rem
 
 #profile-section-1
-
+	height: 400px
+	textarea
+		width: 100%
 #profile-section-2
 	div
-		@include span-columns(8)
 		h6
+			width: 75%
 		.profile-tile
-			height: 275px
+			.profile-instrument-row
+				position: relative
+				height: 60px
+				input
+					position: absolute
+				input.profile-instrument-years
+					position: absolute
+					width: 30px
+					right: 160px
+				div.select_style
+					position: absolute
+					right: 0
+					width: 80px
+
+.forte-profile-input
+	position: relative
+	height: 40px
+	label, input
+		position: absolute
+	label
+		left: 0
+		top: 7px 
+		height: 18px
+	input
+		right: 0
+
+#profile-availabilites
+	button
+		margin: 1rem 0 0 0
+
+#profile-save
+	margin-top: 2rem
+	margin-bottom: 2rem
+	position: absolute
+	left: 45%
