@@ -15,4 +15,5 @@ $(document).ready(function(){
         }
     }
     var main_giphy = setInterval(change_background,4000);
+
 });

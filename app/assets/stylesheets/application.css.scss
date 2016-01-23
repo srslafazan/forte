@@ -10,13 +10,12 @@
 @import 'styles/components';
 @import 'styles/switch';
 @import 'styles/pages';
-@import 'styles/home';
+@import 'styles/index';
 @import 'styles/about';
 @import 'styles/involve';
-
-// styles
-@import "styles/pages";
-@import "styles/home";
 @import "styles/modal";
-
+@import "styles/tinycarousel";
 @import 'styles/partials/header-nav';
+
+//icons
+@import 'material_icons';
