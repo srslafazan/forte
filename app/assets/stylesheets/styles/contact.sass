@@ -1,0 +1,55 @@
+#contact-us-form
+	
+	@include media($media-small-down)
+		width: 90%
+		margin: 2rem 5% 0 5%
+	
+		input:nth-child(2), input:nth-child(3), input:nth-child(4)
+			max-width: 48%
+			display: inline-block
+		input:nth-child(3)
+			float: right
+		input:nth-child(4)
+			max-width: 100%
+			display: block
+		textarea
+			width: 100%
+		.forte-submit
+			margin: 0 auto 0 calc((100% - 50px)/2)
+		
+	@include media($media-medium)
+		width: 70%
+		margin: 2rem 15% 0 15%
+	
+		input:nth-child(2), input:nth-child(3), input:nth-child(4)
+			max-width: 48%
+			display: inline-block
+		input:nth-child(3)
+			float: right
+		input:nth-child(4)
+			max-width: 100%
+			display: block
+		textarea
+			width: 100%
+		.forte-submit
+			margin: 0 auto 0 calc((100% - 50px)/2)
+		
+		
+	@include media($media-large-up)
+		width: 50%
+		margin: 2rem 25% 0 25%
+	
+		input:nth-child(2), input:nth-child(3), input:nth-child(4)
+			max-width: 48%
+			display: inline-block
+		input:nth-child(3)
+			float: right
+		input:nth-child(4)
+			max-width: 100%
+			display: block
+		textarea
+			width: 100%
+		.forte-submit
+			margin: 0 auto 0 calc((100% - 50px)/2)
+		
+

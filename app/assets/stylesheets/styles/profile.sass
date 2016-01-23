@@ -1,0 +1,70 @@
+=profile-section
+	margin-top: 1rem
+	@include outer-container
+	height: 325px
+	.profile-tile
+		height: 325px
+		@include span-columns(4)
+		h6
+			border-bottom: $forte-border-maroon
+#profile-section-0, #profile-section-1, #profile-section-2
+	+profile-section
+	.profile-title
+		border-bottom: $forte-border-maroon
+#profile-edit-button
+	float: right
+
+#profile-section-0
+	text-align: center
+	div:first-child
+		height: 3rem
+	#profile-main-image
+		margin: 0 auto 0 auto
+		display: inline-block
+		img
+			margin-top: 1rem
+
+#profile-section-1
+	height: 400px
+	textarea
+		width: 100%
+#profile-section-2
+	div
+		h6
+			width: 75%
+		.profile-tile
+			.profile-instrument-row
+				position: relative
+				height: 60px
+				input
+					position: absolute
+				input.profile-instrument-years
+					position: absolute
+					width: 30px
+					right: 160px
+				div.select_style
+					position: absolute
+					right: 0
+					width: 80px
+
+.forte-profile-input
+	position: relative
+	height: 40px
+	label, input
+		position: absolute
+	label
+		left: 0
+		top: 7px 
+		height: 18px
+	input
+		right: 0
+
+#profile-availabilites
+	button
+		margin: 1rem 0 0 0
+
+#profile-save
+	margin-top: 2rem
+	margin-bottom: 2rem
+	position: absolute
+	left: 45%

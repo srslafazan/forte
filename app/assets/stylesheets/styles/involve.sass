@@ -1,20 +1,61 @@
+$get-involved-height: 350px
+
+=trapezium-left
+	height: 0
+	border-bottom: $get-involved-height solid transparent
+	border-left: 0px solid transparent
+	border-right: 60px solid transparent
+
 section#get-involved
 	position: relative
-	height: 350px
+	height: $get-involved-height
 	width: 100%
 	background-color: $forte-white
 	background-size: cover
 	margin: 4rem 0 4rem 0
 	@include media(max-width 768px)
-		height: 350px
+		height: $get-involved-height
+
+	div#get-involved-left
+		position: absolute
+		z-index: 1
+		height: 300px
+		width: 600px
+		top: 25px
+		background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f2/Broadway_tower_grayscale.jpg')
+		display: inline-block
+		left: 2rem
+
+		@include media($media-medium-down)
+			display: none
+
+	div#get-involved-right
+		position: absolute
+		z-index: 1
+		height: 300px
+		width: 600px
+		top: 25px
+		right: 2rem
+
+		background-image: url('http://darkroom.baltimoresun.com/wp-content/uploads/2012/11/sr-sunshots-grayscale-p1.jpg')
+		display: inline-block
+
+		@include media($media-medium-down)
+			display: none
 
 	div#get-involved-center
 		@include span-columns(6)
-		height: 350px
+		z-index: 2
+		height: $get-involved-height
 		left: 25%
+		background-color: $forte-gray
 		background: url('http://www.materials-world.com/shingles/certainteed/customsealdon/images/NickelGray.jpg')
 		margin: 0 auto
 		position: absolute
+
+		-webkit-box-shadow: 0px 0px 200px 10px $forte-white
+		-moz-box-shadow: 0px 0px 200px 10px $forte-white
+		box-shadow: 0px 0px 200px 10px $forte-white
 		
 		@include media($media-small-down)
 			@include span-columns(12)
@@ -23,6 +64,39 @@ section#get-involved
 			@include span-columns(9)
 			left: 12.5%
 			
+		.tile-overlay-maroon
+			opacity: 0.5
+			width: calc(50% + 30px)
+		.tile-overlay-maroon-left
+			height: 0
+			position: absolute
+			left: 0
+			top: 0
+			border-bottom: $get-involved-height solid transparent
+			border-left: 0px solid transparent
+			border-right: 60px solid transparent
+			&:hover
+				border-bottom: $get-involved-height solid $forte-maroon
+		.tile-overlay-maroon-right
+			height: 0
+			position: absolute
+			right: 0
+			top: 0
+			border-left: 60px solid transparent
+			border-top: $get-involved-height solid transparent
+			border-right: 0px solid transparent
+			&:hover
+				border-top: $get-involved-height solid $forte-maroon
+		button#get-involved-learn-button
+			position: absolute
+			top: $get-involved-height/2 - 50px
+			left: 15%
+			z-index: 3
+		button#get-involved-teach-button
+			position: absolute
+			top: $get-involved-height/2 - 50px
+			right: 15%
+			z-index: 3
 
 section#get-involved-lower
 	text-align: center

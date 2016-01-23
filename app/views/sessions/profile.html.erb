@@ -1,5 +1,143 @@
-<h1>Sessions#profile</h1>
-<p>Find me in app/views/sessions/profile.html.erb</p>
+<div class="forte-message-banner">
+	<h1>Congratulations! Your profile has been submitted for review.</h1>
+	<p>The Forte team will contact you with a decision within the next 72 hours.</p>
+</div>
+
+<form action='' method='post' class='forte-form' id='finish-your-profile-form'>
+
+	<section id='profile-section-0'>
+
+		<div>
+
+			<button id='profile-edit-button'>Edit Profile</button>
+
+		</div>
+
+			<div id='profile-main-image'>
+				<img src="http://placehold.it/200x200">
+				<h6>Sophie Safnuk</h6>
+			</div>
+
+	</section>
+
+
+	<section id='profile-section-1'>
+
+		<div class='profile-tile'>
+			<h6 class='profile-title'>Personal Information</h6>
+
+			<div class='forte-profile-input'>
+				<label class='forte-label'>First name</label>
+				<input type='text'  name='first_name' class='forte-input' placeholder="First Name" value='Sofie'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Last name</label>
+				<input type='text'  name='last_name' class='forte-input' placeholder="Last Name" value='Safnuk'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Email</label>
+				<input type='text'  name='email' class='forte-input' placeholder="Email" value='sophie.safnuk@gmail.com'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Phone number</label>
+				<input type='text'  name='phone' class='forte-input' placeholder="Phone Number" value='(xxx) xxx-xxxx'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Birth date</label>
+				<input type='text'  name='birthdate' class='forte-input' placeholder="Birthdate" value='1/21/2005'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Location</label>
+				<input type='text'  name='location' class='forte-input' placeholder="Location" value='Berkeley, CA'>
+			</div>
+
+		</div>
+		<div class='profile-tile'>
+			<h6 class='profile-title'>Biography</h6>
+			<textarea placeholder="N/A"></textarea>
+		</div>
+		<div class='profile-tile' id='profile-availabilites'>
+			<h6 class='profile-title'>Weekly Availabilities</h6>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Sunday</label>
+				<input type='text'  name='sunday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Monday</label>
+				<input type='text'  name='monday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Tuesday</label>
+				<input type='text'  name='tuesday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Wednesday</label>
+				<input type='text'  name='wednesday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Thursday</label>
+				<input type='text'  name='thursday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Friday</label>
+				<input type='text'  name='friday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
+			</div>
+			<div class='forte-profile-input'>
+				<label class='forte-label'>Saturday</label>
+				<input type='text'  name='saturday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
+			</div>
+
+			<button>Edit Availabilities</button>
+
+		</div>
+
+	</section>
+
+
+
+
+	<section id='profile-section-2'>
+		<div>
+			<h6 class='profile-title'>Instruments</h6>
+			<div class='profile-tile'>
+
+				<div class='profile-instrument-row'>
+					<label>Piano <span>x</span></label>
+					<input class='profile-instrument-years' type='text' placeholder="0">
+					<select class='change' name='skill' value="skill">
+						<option selected="selected">Skill</option>
+						<option value="beginner">Beginner</option>
+						<option value="intermediate">Intermediate</option>
+						<option value="advanced">Advanced</option>
+					</select>
+				</div>
+
+				<div class='profile-instrument-row'>
+					<label>Guitar <span>x</span></label>
+					<input class='profile-instrument-years' type='text' placeholder="0">
+
+					<select class='change' name='skill' value="skill">
+						<option selected="selected">Skill</option>
+						<option value="beginner">Beginner</option>
+						<option value="intermediate">Intermediate</option>
+						<option value="advanced">Advanced</option>
+					</select>
+				</div>
+
+			</div>
+
+			<div class='profile-tile'>
+				<input type="text" placeholder="Start typing">
+			</div>
+
+		</div>
+	</section>
+
+	<!-- <section id='profile-save'> -->
+		<input id='profile-save' type='submit' class='forte-submit' value='Save & Finish'>
+		<!-- <a href="" class='forte-link-gray'>Cancel</a> -->
+	<!-- </section> -->
+</form>
 <script type="text/javascript">
     $(document).ready(function(){
         var menu = true;

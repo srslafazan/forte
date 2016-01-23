@@ -12,10 +12,12 @@
 	color: $forte-maroon
 	font-size: $base-font-size * 0.9
 	font-weight: $forte-font-weight + 100
+
 	&:hover
 		color: $forte-maroon
 		background-color: $forte-light-maroon
 	&:focus
+		outline: 0
 		border: $forte-border-maroon
 		color: $forte-maroon
 		background-color: $forte-white
@@ -134,9 +136,13 @@ ol
 	list-style: decimal inside none
 
 form
+	label
+		display: inline
+		font-weight: 300
+		margin: 0 10px 0 0
 	input
 		max-width: 200px
-
+		display: inline
 	input[type=checkbox]
 		visibility: hidden
 
@@ -176,7 +182,7 @@ form
 		background-color: $forte-light-gray
 		top: 0px
 		left: 0px
-	.forte-checkbox-square label:hover::after
+
 	.forte-checkbox-square input[type=checkbox]:checked + label:after
 		background-color: $forte-maroon
 		opacity: 1
@@ -184,3 +190,13 @@ form
 section
 
 article
+
+div.forte-message-banner
+	h1
+		margin: 2rem 0 0.25rem 0
+	p
+		margin: 0 0 1.25rem 0
+	width: 75%
+	text-align: center
+	margin: 0 auto
+	border-bottom: $forte-border-maroon

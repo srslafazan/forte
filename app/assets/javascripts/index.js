@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+// CAROUSEL
     var index = 1;
     function change_background(){
         if (index == 1){
@@ -16,4 +18,6 @@ $(document).ready(function(){
     }
     var main_giphy = setInterval(change_background,4000);
 
+// NICE SELECT
+    $('.change').niceselect();
 });
