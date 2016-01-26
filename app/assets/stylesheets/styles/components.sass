@@ -13,7 +13,8 @@
 	font-size: $base-font-size * 0.9
 	font-weight: $forte-font-weight + 100
 	height: 40px
-	// width: 120px
+	padding-right: 1rem
+	padding-left: 1rem
 
 	&:hover
 		color: $forte-maroon
@@ -151,10 +152,43 @@ form
 	input[type=submit]
 		+forte-button
 
-	textarea
-		height: 200px
-		width: 800px
-		display: block
+textarea
+	height: 200px
+	width: 800px
+	display: block
+	outline: none
+	border: $forte-border-maroon
+	box-shadow: none
+	border-radius: 0
+	&:focus
+		outline: none
+		border: $forte-border-maroon
+		box-shadow: none
+	&:hover
+		outline: none
+		border: $forte-border-maroon
+		box-shadow: none
+
+div.select_style
+	outline: none
+	border: $forte-border-dark-gray
+	box-shadow: none
+	border-radius: 0
+	&:focus
+		outline: none
+		border: $forte-border-dark-gray
+		box-shadow: none
+	&:hover
+		outline: none
+		border: $forte-border-dark-gray
+		box-shadow: none
+		background-color: $forte-light-light-gray
+
+.values
+	&:hover 
+		background-color: $forte-maroon !important // override default niceselect styles
+		color: $forte-white !important // override default niceselect styles
+
 
 .forte-checkbox
 	label
@@ -188,6 +222,20 @@ form
 	.forte-checkbox-square input[type=checkbox]:checked + label:after
 		background-color: $forte-maroon
 		opacity: 1
+
+input.forte-input
+	outline: none
+	border: $forte-border-maroon
+	box-shadow: none
+	border-radius: 0
+	&:focus
+		outline: none
+		border: $forte-border-maroon
+		box-shadow: none
+	&:hover
+		outline: none
+		border: $forte-border-maroon
+		box-shadow: none
 
 section
 

@@ -34,6 +34,15 @@ class StudentsController < ApplicationController
         # redirect_to '/'
     end
 
+    def show # profile.html.erb
+
+    end
+
+    def edit # edit_profile.html.erb
+
+    end
+
+
     private
         def student_basic_params
             params.require(:student).permit("email", "first_name", "last_name")

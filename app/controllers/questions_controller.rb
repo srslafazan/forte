@@ -6,6 +6,9 @@ class QuestionsController < ApplicationController
         # probably hook up a mailer here
     end
 
+    def show # contact.html.erb
+    end
+
     private
 	    def question_params
 	        params.require(:question).permit("subject", "message")

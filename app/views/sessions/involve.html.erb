@@ -1,6 +1,8 @@
 <section id='get-involved'>
 	<div id="get-involved-left"></div>
 	<div id="get-involved-center">
+		<p id='get-involved-learn-tagline' class='forte-p-overlay forte-p-medium'>Sign up to start<br>learning instruments now</p>
+		<p id='get-involved-teach-tagline' class='forte-p-overlay forte-p-medium'>Sign up to start<br>teaching students now</p>
 		<div class="tile-overlay-maroon tile-overlay-maroon-left"></div>
 		<button id='get-involved-learn-button'class='forte-button-round-small forte-button-overlay'>Learn</button>
 		<div class="tile-overlay-maroon tile-overlay-maroon-right"></div>
@@ -56,5 +58,29 @@
 			e.stopPropagation();
 			});
 		});
+	});
+
+	$(document).ready(function(){
+		
+		// logic for maroon trapezoid overlays
+		$('#get-involved-learn-button').mouseenter(function(){
+			$('.tile-overlay-maroon-left').css('border-bottom', '350px solid #821932');
+			$('#get-involved-learn-tagline').css('visibility', 'visible');
+		});
+		$('.tile-overlay-maroon-left').mouseleave(function(){
+			$(this).css('border-bottom', '0');
+			$('#get-involved-learn-tagline').css('visibility', 'hidden');
+		});
+
+		$('#get-involved-teach-button').mouseenter(function(){
+			$('.tile-overlay-maroon-right').css('border-top', '350px solid #821932');
+			$('#get-involved-teach-tagline').css('visibility', 'visible');
+		});
+		$('.tile-overlay-maroon-right').mouseleave(function(){
+			$(this).css('border-top', '0');
+			$('#get-involved-teach-tagline').css('visibility', 'hidden');
+		});		
+
+
 	});
 </script>

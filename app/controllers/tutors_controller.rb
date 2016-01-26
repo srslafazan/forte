@@ -33,6 +33,12 @@ class TutorsController < ApplicationController
         # redirect_to '/'
     end
 
+    def show
+    end
+
+    def edit
+    end
+
     private
         def tutor_basic_params
             params.require(:tutor).permit("email", "first_name", "last_name")

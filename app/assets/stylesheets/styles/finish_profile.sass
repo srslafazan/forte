@@ -76,10 +76,17 @@
 #finish-mobility-preferences
 	text-align: center
 	#finish-mobility-left
-		@include span-columns(6, $display: block-collapse)
+		@include span-columns(5, $display: block-collapse)
+		@include media($media-medium-down)
+			@include span-columns(12, $display: block-collapse)
+		.forte-checkbox
+			text-align: right
+			@include media($media-medium-down)
+				text-align: center
 	#finish-mobility-right
-		@include span-columns(6, $display: block-collapse)
-
+		@include span-columns(7, $display: block-collapse)
+		@include media($media-medium-down)
+			@include span-columns(12, $display: block-collapse)
 #finish-education
 	+finish-section
 	height: 150px
