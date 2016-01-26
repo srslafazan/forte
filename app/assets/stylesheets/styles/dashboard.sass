@@ -1,0 +1,209 @@
+=dashboard-section
+	margin-top: 3rem
+	@include outer-container
+	height: 325px
+	.dashboard-tile
+		height: 325px
+		@include span-columns(4)
+		h6
+			border-bottom: $forte-border-maroon
+
+#dashboard-section-0, #dashboard-section-2
+	+dashboard-section
+	.dashboard-title
+		border-bottom: $forte-border-maroon
+
+#dashboard-section-0
+	height: 400px
+	textarea
+		width: 100%
+	.dashboard-tile
+		p.forte-p-medium
+			margin: 1.5rem 0 1.5rem 0
+
+#dashboard-section-2
+	div
+		h6
+			width: 75%
+		.dashboard-tile
+			.dashboard-instrument-row
+				position: relative
+				height: 60px
+				input
+					position: absolute
+				input.dashboard-instrument-years
+					position: absolute
+					width: 30px
+					right: 160px
+				div.select_style
+					position: absolute
+					right: 0
+					width: 80px
+
+.forte-dashboard-input
+	position: relative
+	height: 40px
+	label, input
+		position: absolute
+	label
+		left: 0
+		top: 7px 
+		height: 18px
+	input
+		right: 0
+
+#dashboard-availabilites
+	button
+		margin: 1rem 0 0 0
+
+#dashboard-main-image
+	.image-subtitle
+		border-bottom: 0 !important
+	
+#dashboard-tile-center
+	#dashboard-upcoming-lessons
+		overflow-y: scroll
+		height: 300px
+		margin: 0 auto 1rem auto
+		width: 100%
+		border: $forte-gray solid 1px
+		div.dashboard-upcoming-lesson
+			height: 75px
+			width: calc(100% - 1rem)
+			margin: 0.5rem
+			&:hover
+				background-color: $forte-overlay-gray
+			div
+				border: $forte-gray solid 1px
+				margin: 0
+				height: 75px
+				p
+					margin: 0
+					font-weight: 400
+			div:nth-child(1)
+				@include span-columns(3, $display: block-collapse)
+				border-right: none
+				text-align: center
+				p:first-child
+					margin-top: 0.5rem
+				p:nth-child(2)
+					font-size: $base-font-size * 1.75
+					line-height: 1.75rem
+			div:nth-child(2)
+				position: relative
+				@include span-columns(9, $display: block-collapse)
+				p
+					margin-left: 1rem
+					font-size: $base-font-size * 0.6
+					color: $forte-maroon
+				p:first-child
+					font-size: $base-font-size * 0.8
+					margin-top: 0.25rem
+					color: $forte-dark-gray
+				button
+					height: 60px
+					width: 60px
+					font-size: $base-font-size * 0.2
+					position: absolute
+					visibility: hidden
+					top: 6px
+					right: 20px
+					&.dashboard-upcoming-lesson-move-button
+						color: $forte-maroon
+						border: $forte-border-maroon
+						&:hover
+							background-color: $forte-overlay-maroon-2
+					&.dashboard-upcoming-lesson-cancel-button
+						right: 6rem
+						
+
+	#dashboard-payments
+		height: 200px
+		margin: 0 auto 1rem auto
+		width: 100%
+		div:nth-child(1)
+			height: 75px
+			@include span-columns(3, $display: block-collapse)
+			p.dashboard-payments-total
+				font-size: $base-font-size * 1.25
+				font-weight: 400
+				text-align: center
+				margin: 0.25rem 0 0 0
+		div:nth-child(2)
+			height: 75px
+			@include span-columns(9, $display: block-collapse)
+			width: 74%
+			margin-left: 0.4%
+			p
+				margin: 0
+			p.dashboard-payments-total-right
+				margin: 0 0 0 1rem
+		div:nth-child(3)
+			height: 75px
+			@include span-columns(12)
+			div
+				height: 73px
+				margin: 0
+				border: $forte-gray solid 1px
+			div:nth-child(1)
+				@include span-columns(6, $display: block-collapse)
+				border-right: none
+				text-align: center
+				p:first-child
+					margin: 1rem 0 0 0
+			div:nth-child(2)
+				@include span-columns(6, $display: block-collapse)
+				float: right
+				text-align: center
+				p:first-child
+					margin: 1rem 0 0 0
+		a
+			margin: 1rem auto 0 auto
+			@include span-columns(12)
+			text-align: center
+
+#dashboard-feedback
+	height: inherit
+	#dashboard-feedback-container
+		@include span-columns(12, $display: block-collapse)
+		div
+			@include span-columns(12, $display: block-collapse)
+			height: 75px
+			div
+				height: 73px
+			div:nth-child(1)
+				@include span-columns(4, $display: block-collapse)
+				text-align: center
+				margin-top: 0.5rem
+				p
+					font-size: $base-font-size * 2
+					font-weight: 800
+					color: $forte-maroon
+			div:nth-child(2)	
+				@include span-columns(8, $display: block-collapse)
+				p
+					margin: 0 0 0 1rem
+				p:first-child
+					margin-top: 0.5rem
+	button
+		float: right
+	#dashboard-feedback-profiles
+		margin: 1rem 0 1rem 0
+		@include span-columns(12, $display: block-collapse)
+		overflow-y: scroll
+		div
+			height: 75px
+			div
+				height: 73px
+				p
+					margin: 0 0 0 1rem
+				p:first-child
+					margin-top: 0.5rem
+			div:nth-child(1)
+				@include span-columns(4, $display: block-collapse)
+				text-align: center
+				height: 73px
+			div:nth-child(2)
+				@include span-columns(8, $display: block-collapse)
+
+

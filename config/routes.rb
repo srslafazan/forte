@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'finish_profile' => 'sessions#finish_profile'
   get 'profile' => 'sessions#profile'
   get 'edit_profile' => 'sessions#edit_profile'
+  get 'dashboard' => 'sessions#dashboard'
   get 'feedback' => 'sessions#feedback'
   get 'payments' => 'sessions#payments'
   get 'support' => 'sessions#support'
