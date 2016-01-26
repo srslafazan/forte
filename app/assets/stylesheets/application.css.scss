@@ -18,7 +18,7 @@
 @import 'styles/hover-tile';
 
 @import 'styles/pages';
-@import 'styles/home';
+@import 'styles/index';
 @import 'styles/about';
 @import 'styles/involve';
 @import 'styles/contact';
@@ -31,6 +31,9 @@
 @import "styles/pages";
 @import "styles/home";
 @import "styles/modal";
-
+@import "styles/tinycarousel";
 @import 'styles/partials/header-nav';
+
+//icons
+@import 'material_icons';
 @import 'styles/partials/availability-picker';

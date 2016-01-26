@@ -1,8 +1,8 @@
 <form action='' method='post' class='forte-form' id='finish-your-profile-form'>
-	
+
 	<h1>Finish Creating Your Profile</h1>
 	<h6>Your finished profile will be sent to the Forte team for review.</h6>
-		
+
 	<section id='profile-section'>
 		<div id='profile-section-left'>
 			<img id='finish-profile-image' src="http://placehold.it/150x150" alt='image upload'>
@@ -53,7 +53,7 @@
 				<option value="intermediate">Intermediate</option>
 				<option value="advanced">Advanced</option>
 			</select>
-			
+
 		</div>
 		<div id='finish-years'>
 			<h6>Years played</h6>
@@ -77,16 +77,16 @@
 
 
 		<input type="text" placeholder="City">
-		
+
 		<select class='change' name='state' value="state">
 			<option selected="selected">State</option>
 			<option value="CA">CA</option>
 			<option value="MD">MD</option>
 			<option value="WA">WA</option>
 		</select>
-		
+
 		<input type="text" placeholder="Zipcode">
-	
+
 	</section>
 
 	<section id='finish-mobility-preferences'>
@@ -160,21 +160,21 @@
 		</select>
 
 	</section>
-	
+
 	<section id='finish-weekly-availabilities'>
 		<h4>Weekly Availabilities</h4>
 		<h6>Highlight your available times. You can edit your schedule anytime.</h6>
 
-		<%= render partial: 'partials/availability-picker' %>	
+		<%= render partial: 'partials/availability-picker' %>
 
 	</section>
-	
+
 	<section id='finish-short-answer'>
 		<h4>Short Answer</h4>
 		<h6>Tell us about your experience with music and what you hope to achieve with Forte!</h6>
 		<textarea></textarea>
 	</section>
-	
+
 	<section id='finish-link-social'>
 		<h4>Link your social profiles</h4>
 	</section>
@@ -185,3 +185,45 @@
 	</section>
 
 </form>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var menu = true;
+        $('.mobile-nav-trigger').on("click",function(){
+            $('.mobile-menu').slideToggle("slow");
+            if(menu){
+                $('.mobile-nav-trigger').html("<i class='large material-icons'>close</i>");
+                menu = false
+            }else{
+                $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+                menu = true;
+            }
+        });
+        $('a button').on("click",function(){
+            $('.mobile-menu').hide();
+            $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+            menu = true
+        });
+        $('main').on("mouseover",function(){
+            $('.mobile-menu').hide();
+            $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+            menu = true
+        });
+        $(function() {
+            $("#modal-1").on("change", function() {
+            if ($(this).is(":checked")) {
+              $("body").addClass("modal-open");
+            } else {
+              $("body").removeClass("modal-open");
+            }
+            });
+
+            $(".modal-fade-screen, .modal-close").on("click", function() {
+            $(".modal-state:checked").prop("checked", false).change();
+            });
+
+            $(".modal-inner").on("click", function(e) {
+            e.stopPropagation();
+            });
+        });
+    });
+</script>

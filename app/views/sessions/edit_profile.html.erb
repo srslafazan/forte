@@ -1,2 +1,44 @@
 <h1>Sessions#edit_profile</h1>
 <p>Find me in app/views/sessions/edit_profile.html.erb</p>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var menu = true;
+        $('.mobile-nav-trigger').on("click",function(){
+            $('.mobile-menu').slideToggle("slow");
+            if(menu){
+                $('.mobile-nav-trigger').html("<i class='large material-icons'>close</i>");
+                menu = false
+            }else{
+                $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+                menu = true;
+            }
+        });
+        $('a button').on("click",function(){
+            $('.mobile-menu').hide();
+            $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+            menu = true
+        });
+        $('main').on("mouseover",function(){
+            $('.mobile-menu').hide();
+            $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+            menu = true
+        });
+        $(function() {
+            $("#modal-1").on("change", function() {
+            if ($(this).is(":checked")) {
+              $("body").addClass("modal-open");
+            } else {
+              $("body").removeClass("modal-open");
+            }
+            });
+
+            $(".modal-fade-screen, .modal-close").on("click", function() {
+            $(".modal-state:checked").prop("checked", false).change();
+            });
+
+            $(".modal-inner").on("click", function(e) {
+            e.stopPropagation();
+            });
+        });
+    });
+</script>

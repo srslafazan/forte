@@ -1,56 +1,90 @@
 // use sass: http://sass-lang.com/
 $primary-color: #821932
 header
-    background-color: $primary-color
-    height: 100px
+    background-color: $forte-maroon
+    height: 90px
     width: 100%
     padding: 20px 30px
     .header_logo
-        @include span-columns(6)
-        @include media(769px)
-            @include span-columns(3)
+        width: 150px
+        display: inline-block
         text-align: left
     img
         width: 150px
         height: auto
-    nav
-        .desktop_menu
-            display: inline-block
-            @include span-columns(6)
-            @include media(769px)
-                @include span-columns(9)
-            @include media(max-width 768px)
-                display: none
-            text-align: right
-            li
-                display: inline-block
-                margin: 10px
-                font-weight: lighter
-                font-size: 1.1em
-                a
-                    color: white
-            li:nth-child(3n)
-                border: 1px solid white
-                padding: 5px 15px
 
+    ul.forte-nav
+        @include media(max-width 640px)
+            display: none
+        @include media($media-medium)
+            &.forte-nav > li
+                font-size: $base-font-size
+        @include media($media-large)
+            display: initial
+            &.forte-nav > li
+                font-size: $base-font-size * 1.1
+        @include media($media-huge)
+            &.forte-nav > li
+                font-size: $base-font-size * 1.2
 
-ul.forte-nav
-    height: 25px
-    margin: 30px auto
-    @include media($media-tiny)
+    button.mobile-nav-trigger
+        background: transparent
+        outline: none
+        border: none !important
+    .mobile-menu
         display: none
-    @include media ($media-small)
-        &.forte-nav > li
-            &:nth-child(2)
-                display: none
-            font-size: $base-font-size * 1.0
-    @include media($media-medium)
-        &.forte-nav > li
-            font-size: $base-font-size * 1.0
-    @include media($media-large)
-        display: initial
-        &.forte-nav > li
-            font-size: $base-font-size * 1.2
-    @include media($media-huge)
-        &.forte-nav > li
-            font-size: $base-font-size * 1.3
+        position: fixed
+        top: 0
+        margin-top: -10px
+        left: 0
+        width: 70%
+        height: auto
+        background-color: transparentize($forte-maroon, .1)
+        border-radius: 2px
+        ul
+            padding-top: 20px
+        li
+            text-align: center
+            border: $forte-white
+            list-style: none
+            padding-top: 5px
+            a, span
+                text-decoration: none
+                color: $forte-white !important
+                font-weight: 100
+
+    .mobile-nav
+        display: none
+        @include media(max-width 640px)
+            display: inline-block
+            cursor: pointer
+            position: relative
+            width: auto
+            text-align: right
+            i
+                color: $forte-white
+                margin-top: 10px
+
+// hover underline styling
+a.animating-link, span.animating-link
+    position: relative
+    text-decoration: none
+
+a.animating-link:before, span.animating-link:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 1px
+    bottom: 0
+    left: 0
+    background-color: $forte-white
+    visibility: hidden
+    -webkit-transform: scaleX(0)
+    transform: scaleX(0)
+    -webkit-transition: all 0.3s ease-in-out 0s
+    transition: all 0.3s ease-in-out 0s
+
+a.animating-link:hover:before, span.animating-link:hover:before
+    visibility: visible
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)

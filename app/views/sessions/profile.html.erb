@@ -9,8 +9,8 @@
 
 		<div>
 
-			<button id='profile-edit-button'>Edit Profile</button>	
-		
+			<button id='profile-edit-button'>Edit Profile</button>
+
 		</div>
 
 			<div id='profile-main-image'>
@@ -22,7 +22,7 @@
 
 
 	<section id='profile-section-1'>
-		
+
 		<div class='profile-tile'>
 			<h6 class='profile-title'>Personal Information</h6>
 
@@ -86,7 +86,7 @@
 				<label class='forte-label'>Saturday</label>
 				<input type='text'  name='saturday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
 			</div>
-		
+
 			<button>Edit Availabilities</button>
 
 		</div>
@@ -112,7 +112,7 @@
 				<div class='profile-instrument-row'>
 					<label>Guitar <span>x</span></label>
 					<input class='profile-instrument-years' type='text' placeholder="0">
-					
+
 					<select class='change' name='skill' value="skill">
 						<option selected="selected">Skill</option>
 						<option value="beginner">Beginner</option>
@@ -135,3 +135,45 @@
 		<!-- <a href="" class='forte-link-gray'>Cancel</a> -->
 	<!-- </section> -->
 </form>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var menu = true;
+        $('.mobile-nav-trigger').on("click",function(){
+            $('.mobile-menu').slideToggle("slow");
+            if(menu){
+                $('.mobile-nav-trigger').html("<i class='large material-icons'>close</i>");
+                menu = false
+            }else{
+                $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+                menu = true;
+            }
+        });
+        $('a button').on("click",function(){
+            $('.mobile-menu').hide();
+            $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+            menu = true
+        });
+        $('main').on("mouseover",function(){
+            $('.mobile-menu').hide();
+            $('.mobile-nav-trigger').html("<i class='large material-icons'>menu</i>");
+            menu = true
+        });
+        $(function() {
+            $("#modal-1").on("change", function() {
+            if ($(this).is(":checked")) {
+              $("body").addClass("modal-open");
+            } else {
+              $("body").removeClass("modal-open");
+            }
+            });
+
+            $(".modal-fade-screen, .modal-close").on("click", function() {
+            $(".modal-state:checked").prop("checked", false).change();
+            });
+
+            $(".modal-inner").on("click", function(e) {
+            e.stopPropagation();
+            });
+        });
+    });
+</script>

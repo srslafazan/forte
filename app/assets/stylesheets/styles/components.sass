@@ -46,7 +46,7 @@ h6
 	color: $forte-gray
 	font-size: $base-font-size * 1.1
 
-p 
+p
 	color: $forte-gray
 	&.forte-p-small
 		font-size: $base-font-size * 0.8
@@ -60,7 +60,7 @@ p
 		color: $forte-p-overlay
 
 a
-	font-size: $base-font-size * 0.8
+	font-size: $base-font-size
 	text-decoration: underline
 	&.forte-link-gray
 		color: $forte-gray
@@ -84,7 +84,7 @@ button
 		color: $forte-white
 		background-color: transparent
 		border: $forte-border-white
-		font-weight: 600
+		font-weight: 400
 		&:hover
 			background-color: $forte-overlay-white
 
@@ -99,33 +99,36 @@ button
 		height: 150px
 		width: 150px
 		font-size: $base-font-size * 1.2
-
+nav
+	display: inline-block
+	float: right
 ul
 	color: $forte-dark-gray
+	vertical-align: top
 	li
 		list-style: circle inside none // TODO: 1 - replace list style with image
 	li.forte-ul-li-active
 		list-style: disc inside none // TODO: 1 - replace list style with image
 	&.forte-nav
-		float: right
+
 	&.forte-nav > li
-		display: inline
-		font-size: $base-font-size * 1.4
-		font-weight: 200
-		margin: 0 10px 0 10px
-		a
+		display: inline-block
+		font-size: $base-font-size * 1.6
+		font-weight: lighter
+		margin: 10px
+		a, span
 			text-decoration: none
 			color: $forte-white
 			border-bottom: none
 			&:hover
-				border-bottom: 2px solid $forte-white
+				color: $forte-white
 			&.forte-nav-link-active
 				border-bottom: 2px solid $forte-white
 			&.forte-nav-link-bordered
 				text-decoration: none
 				border: $forte-border-white
 				border-radius: $forte-border-radius
-				padding: 10px
+				padding: 5px 15px
 				&:hover
 					background-color: $forte-overlay-white
 ol
@@ -179,7 +182,7 @@ form
 		background-color: $forte-light-gray
 		top: 0px
 		left: 0px
-	
+
 	.forte-checkbox-square input[type=checkbox]:checked + label:after
 		background-color: $forte-maroon
 		opacity: 1
@@ -194,6 +197,6 @@ div.forte-message-banner
 	p
 		margin: 0 0 1.25rem 0
 	width: 75%
-	text-align: center	
+	text-align: center
 	margin: 0 auto
 	border-bottom: $forte-border-maroon

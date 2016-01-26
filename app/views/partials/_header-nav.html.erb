@@ -1,19 +1,21 @@
 <header>
     <!-- forte logo -->
     <div class="header_logo">
-        <%= image_tag('logo_sample.gif')%>
+        <%= link_to(image_tag('forte_logo_not_logged.gif'), href="/")%>
     </div>
     <!-- teacher or student tag -->
     <nav>
-        <ul class="desktop_menu">
+        <ul class="forte-nav">
             <!-- change menu items when logged in and not -->
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/involve">Get Involved</a></li>
+            <li><a href="/about" class="animating-link">About Us</a></li>
+            <li><a href="/contact" class="animating-link">Contact Us</a></li>
+            <li><a class="forte-nav-link-bordered" href="/register">Get Involved</a></li>
             <li>
                 <div class="modal">
                     <label for="modal-1">
-                        <div class="modal-trigger">Log In</div>
+                        <div class="modal-trigger">
+                            <span  class="animating-link">Log In</span>
+                        </div>
                     </label>
                     <input class="modal-state" id="modal-1" type="checkbox" />
                     <div class="modal-fade-screen">
@@ -27,5 +29,35 @@
                 </div>
             </li>
         </ul>
+        <div class="mobile-nav">
+            <button type="button" class="mobile-nav-trigger">
+                <i class="large material-icons">menu</i>
+            </button>
+        </div>
     </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/register">Sign Up</a></li>
+            <li>
+                <div class="modal">
+                    <label for="modal-mobile">
+                        <div class="modal-trigger">
+                            <span>Log In</span>
+                        </div>
+                    </label>
+                    <input class="modal-state" id="modal-mobile" type="checkbox" />
+                    <div class="modal-fade-screen">
+                        <div class="modal-inner">
+                            <div class="modal-close" for="modal-mobile"></div>
+                            <h1>Modal Title</h1>
+                            <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
+                            <p class="modal-content">Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </header>

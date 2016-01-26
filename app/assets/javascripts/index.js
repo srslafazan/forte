@@ -1,6 +1,6 @@
 $(document).ready(function(){
-   
-// CAROUSEL    
+
+// CAROUSEL
     var index = 1;
     function change_background(){
         if (index == 1){
@@ -20,5 +20,4 @@ $(document).ready(function(){
 
 // NICE SELECT
     $('.change').niceselect();
-
 });
