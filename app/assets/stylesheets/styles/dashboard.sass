@@ -8,6 +8,9 @@
 		h6
 			border-bottom: $forte-border-maroon
 
+		@include media($media-small-down)
+			margin-bottom: 10rem
+
 #dashboard-section-0, #dashboard-section-2
 	+dashboard-section
 	.dashboard-title
@@ -20,6 +23,13 @@
 	.dashboard-tile
 		p.forte-p-medium
 			margin: 1.5rem 0 1.5rem 0
+		@include media($media-small-down)
+			width: 100%
+
+#dashboard-section-1
+	.dashboard-tile
+		@include media($media-small-down)
+			width: 100%
 
 #dashboard-section-2
 	div
@@ -39,6 +49,9 @@
 					position: absolute
 					right: 0
 					width: 80px
+
+			@include media($media-small-down)
+				width: 100%
 
 .forte-dashboard-input
 	position: relative
@@ -62,6 +75,10 @@
 	
 #dashboard-tile-center
 	#dashboard-upcoming-lessons
+
+		@include media($media-small-down)
+			margin-bottom: 2rem
+
 		overflow-y: scroll
 		height: 300px
 		margin: 0 auto 1rem auto
@@ -103,27 +120,27 @@
 				button
 					height: 60px
 					width: 60px
-					font-size: $base-font-size * 0.2
+					font-size: $base-font-size * 0.7
+					font-weight: bold
 					position: absolute
 					visibility: hidden
 					top: 6px
 					right: 20px
+
 					&.dashboard-upcoming-lesson-move-button
 						color: $forte-maroon
 						border: $forte-border-maroon
-						font-weight: 600
 						&:hover
 							background-color: $forte-overlay-maroon-2
 					&.dashboard-upcoming-lesson-cancel-button
 						border: 2px solid $forte-white
-						font-weight: 600
 						right: 6rem
-						
 
 	#dashboard-payments
 		height: 200px
 		margin: 0 auto 1rem auto
 		width: 100%
+
 		div:nth-child(1)
 			height: 75px
 			@include span-columns(3, $display: block-collapse)
@@ -167,6 +184,10 @@
 
 #dashboard-feedback
 	height: inherit
+
+	@include media($media-small-down)
+		margin-top: 8rem
+
 	#dashboard-feedback-container
 		@include span-columns(12, $display: block-collapse)
 		div
@@ -209,4 +230,6 @@
 			div:nth-child(2)
 				@include span-columns(8, $display: block-collapse)
 
-
+.dashboard-material-icons-small
+	font-size: 11px !important
+	vertical-align: text-bottom
