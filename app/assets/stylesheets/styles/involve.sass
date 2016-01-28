@@ -64,6 +64,22 @@ section#get-involved
 			@include span-columns(9)
 			left: 12.5%
 			
+
+		#get-involved-learn-tagline
+			position: absolute
+			left: 10%			
+			top: 50px
+			text-align: center
+			z-index: 1
+			visibility: hidden
+		#get-involved-teach-tagline
+			position: absolute
+			right: 10%
+			top: 50px
+			text-align: center
+			z-index: 1
+			visibility: hidden
+
 		.tile-overlay-maroon
 			opacity: 0.5
 			width: calc(50% + 30px)
@@ -87,16 +103,19 @@ section#get-involved
 			border-right: 0px solid transparent
 			&:hover
 				border-top: $get-involved-height solid $forte-maroon
+		
 		button#get-involved-learn-button
 			position: absolute
 			top: $get-involved-height/2 - 50px
 			left: 15%
 			z-index: 3
+			font-weight: 400
 		button#get-involved-teach-button
 			position: absolute
 			top: $get-involved-height/2 - 50px
 			right: 15%
 			z-index: 3
+			font-weight: 400
 
 section#get-involved-lower
 	text-align: center
