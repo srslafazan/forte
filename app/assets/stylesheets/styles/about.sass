@@ -5,7 +5,8 @@ $about-us-height: 90vh
 #about-us-left
 	background-color: $forte-white
 	height: $about-us-height
-
+	width: 23%
+	float: left
 	#about-us-side-nav
 		width: $about-us-height / 3
 		margin: $about-us-height/6 0 0 auto
@@ -23,7 +24,8 @@ $about-us-height: 90vh
 	@include media($media-small)
 		display: none
 	@include media($media-medium-up)
-		@include span-columns(3, $display: block-collapse)
+		// @include span-columns(3, $display: block-collapse)
+
 		#about-us-side-nav
 			width: $about-us-height / 3
 			margin: $about-us-height/6 0 0 auto
@@ -39,7 +41,9 @@ $about-us-height: 90vh
 #about-us-content
 	height: $about-us-height
 	overflow-y: scroll
-
+	margin-right: -1px // fixes chrome overflow-y 1px offset issue
+	float: right !important
+	max-width: 74%
 	h1,h2,h3,h4,h5,h6
 		&.white
 			color: white
