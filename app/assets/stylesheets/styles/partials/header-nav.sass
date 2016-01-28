@@ -14,6 +14,8 @@ header
         height: auto
 
     ul.forte-nav
+        li
+            vertical-align: bottom
         @include media(max-width 640px)
             display: none
         @include media($media-medium)
@@ -52,7 +54,6 @@ header
                 text-decoration: none
                 color: $forte-white !important
                 font-weight: 100
-
     .mobile-nav
         display: none
         @include media(max-width 640px)
@@ -64,14 +65,27 @@ header
             i
                 color: $forte-white
                 margin-top: 10px
-    .modal, .modal-inner, .modal-intro, .modal-content
-        padding: 0px !important
+    .modal-intro
+        margin: 10px !important
+        text-align: center
     .modal-header-img
         background-image: url('modal-login.gif')
-        background-size: contain
-        height: 115px
+        background-size: cover
+        background-repeat: no-repeat !important
+        background-position: center
+        height: 140px
+        p
+            text-align: center
+            color: $forte-white !important
+            padding-top: 100px
+        span
+            text-decoration: underline !important
     .modal-close
         background: transparent !important
+    .modal-inner, .modal
+        height: auto
+        overflow: hidden !important
+        padding: 0px !important
 // hover underline styling
 a.animating-link, span.animating-link
     position: relative
