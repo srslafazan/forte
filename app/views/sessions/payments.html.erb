@@ -1,3 +1,59 @@
+<div class="container">
+    <h1>Payments</h1>
+    <div class="total">
+        <h5>Total Payments</h5>
+        <h1>$25.00</h1>
+    </div>
+    <div class="method">
+        <h5>Payment Method</h5>
+        <p>Credit Card: **** **** **** 1234</p>
+        <button type="button" class="right" name="button">Add</button>
+        <button type="button" class="right" name="button">Change</button>
+    </div>
+</div>
+<div class="breakdown">
+    <h5>Payment Breakdown</h5>
+    <form class="forte-form right" action="index.html" method="post">
+        <label for="sort">Sort By:</label>
+        <select class="change" name="sort" id="sort">
+            <option value="time" selected>Time</option>
+            <option value="instructor">Instructor</option>
+            <option value="amount">Amount</option>
+            <option value="status">Status</option>
+        </select>
+    </form>
+    <table>
+        <thead>
+            <th></th>
+            <th>Instructor</th>
+            <th>Lesson</th>
+            <th>Amount</th>
+            <th>Status</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><a href="">Kelly Howard</a></td>
+                <td>02/02/16 5-6PM</td>
+                <td>$35.00</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="">Shain Lafazan</a></td>
+                <td>02/01/16 7-8PM</td>
+                <td>$35.00</td>
+                <td>Paid</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="pagination">
+    Page
+    <a href=""><i class="material-icons">chevron_left</i></a>
+    1
+    <a href=""><i class="material-icons">chevron_right</i></a>
+</div>
 <script type="text/javascript">
     $(document).ready(function(){
         var menu = true;

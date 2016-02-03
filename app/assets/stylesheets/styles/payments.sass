@@ -1,0 +1,51 @@
+.right
+    float: right
+.container
+    @include span-columns(10)
+    @include shift(1)
+    margin-top: 40px
+    h1,
+    h5
+        font-weight: $forte-font-weight
+        color: $forte-gray
+        padding-bottom: 5px
+    h1
+        margin-bottom: 20px
+    .total,
+    .method
+        @include span-columns(6 of 12)
+        display: inline-block
+        h5
+            border-bottom: $forte-border-maroon
+        p
+            font-size: 1em
+        button
+            margin-right: 20px
+            padding: 0px 20px !important
+        @include media($media-small-down)
+            @include span-columns(12)
+.breakdown
+    margin-top: 40px
+    h5
+        font-weight: $forte-font-weight
+        color: $forte-gray
+        padding-bottom: 5px
+        border-bottom: $forte-border-maroon
+    display: block
+    #sort
+        display: inline
+    tr th:first-child
+        width: 20px !important
+    @include span-columns(10)
+    @include shift(1)
+    @include media($media-medium-down)
+        th, td
+            font-size: .8em
+.pagination
+    margin-top: 140px
+    text-align: center
+    i
+        vertical-align: bottom
+    @include span-columns(12)
+    @include media($media-medium-down)
+        margin-top: 60px
