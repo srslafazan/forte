@@ -13,7 +13,7 @@ $about-us-height: 90vh
 		li
 			padding: 1rem auto
 			a
-				font-size: $base-font-size * 1.0						
+				font-size: $base-font-size * 1.0
 				color: $forte-dark-gray
 				text-decoration: none
 				&:hover
@@ -32,7 +32,7 @@ $about-us-height: 90vh
 			li
 				padding: 1rem
 				a
-					font-size: $base-font-size * 1.0						
+					font-size: $base-font-size * 1.0
 					color: $forte-dark-gray
 					text-decoration: none
 					&:hover
@@ -48,13 +48,13 @@ $about-us-height: 90vh
 		&.white
 			color: white
 
-	article 
+	article
 		background-color: $forte-maroon
 		padding: 4rem
 		min-height: $about-us-height
 		&.about-us-article-team
 			background-color: $forte-white
-			
+
 			@include media($media-tiny)
 				.forte-team-tile
 					.team-tile-title
@@ -100,17 +100,15 @@ $about-us-height: 90vh
 		@include media($media-small)
 			p
 				display: block
-			ul li 
+			ul li
 				display: block
 
 		@include media($media-medium-up)
 			@include span-columns(12)
-		
+
 	@include media($media-tiny)
 		@include span-columns(12, $display: block-collapse)
 	@include media($media-small)
 		@include span-columns(12, $display: block-collapse)
 	@include media($media-medium-up)
 		@include span-columns(9, $display: block-collapse)
-
-
