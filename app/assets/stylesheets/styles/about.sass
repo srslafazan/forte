@@ -6,10 +6,16 @@ $about-us-height: 90vh
 	background-color: $forte-white
 	height: $about-us-height
 	width: 23%
+
+	@include media($media-medium-down)
+		display: none
+		// @include span-columns(12) // TODO : incorporate nav into medium-down
+
 	float: left
 	#about-us-side-nav
 		width: $about-us-height / 3
-		margin: $about-us-height/6 0 0 auto
+		margin: $about-us-height/6 0 0 5rem !important
+
 		li
 			padding: 1rem auto
 			a
@@ -30,7 +36,7 @@ $about-us-height: 90vh
 			width: $about-us-height / 3
 			margin: $about-us-height/6 0 0 auto
 			li
-				padding: 1rem
+				padding: 1rem 0
 				a
 					font-size: $base-font-size * 1.0
 					color: $forte-dark-gray
@@ -44,6 +50,12 @@ $about-us-height: 90vh
 	margin-right: -1px // fixes chrome overflow-y 1px offset issue
 	float: right !important
 	max-width: 74%
+
+	@include media($media-medium-down)
+		min-width: 101%
+		// width: 100%
+		@include span-columns(12, $display: block-collapse)
+
 	h1,h2,h3,h4,h5,h6
 		&.white
 			color: white
@@ -55,6 +67,32 @@ $about-us-height: 90vh
 		&.about-us-article-team
 			background-color: $forte-white
 
+			.forte-team-tile
+				display: block
+				div
+					min-height: 300px
+
+					img
+						max-width: 250px
+						max-height: 250px
+
+						@include span-columns(4)
+						@include media($media-medium-down)
+							@include span-columns(12)
+							float: none
+							margin: 0 auto 1rem auto
+
+					div
+						@include span-columns(8)
+						@include media($media-medium-down)
+							@include span-columns(12)
+
+			@include media($media-medium-up)
+				height: 300px
+
+			@include media($media-small-down)
+				height: 400px		
+
 			@include media($media-tiny)
 				.forte-team-tile
 					.team-tile-title
@@ -62,31 +100,21 @@ $about-us-height: 90vh
 
 			@include media($media-small)
 				.forte-team-tile
-					height: auto
-					overflow: none
 					.team-tile-title
 						font-size: $base-font-size * 1.1
 
 			@include media($media-medium-up)
 				.forte-team-tile
-					height: 250px
-					img
-						@include span-columns(3)
-						display: inline-block
-					div
-						@include span-columns(9)
-						float: right
-						display: inline-block
-						vertical-align: top
-						.team-tile-title
-							color: orange
-							display: inline-block
-							font-size: $base-font-size * 1.1
+					.team-tile-title
+						font-size: $base-font-size * 1.2
+					
 
 	#about-us-get-involved
-		margin: 0 auto 1rem auto
+		margin: 1rem auto 1rem auto
+		float: left
+		width: 100%
 		p, ul
-			display: inline
+			display: inline-block
 			li
 				display: inline
 				margin: 10px
@@ -94,15 +122,21 @@ $about-us-height: 90vh
 		@include media($media-tiny)
 			p
 				display: block
+				margin: 2rem
 			ul
-				display: block
+				display: inline
 
 		@include media($media-small)
 			p
-				display: block
+				display: inline
+				margin-left: 2rem
 			ul li
-				display: block
+				display: inline
+				margin: 0
 
+		@include media($media-medium-down)
+			p
+				margin-left: 2rem
 		@include media($media-medium-up)
 			@include span-columns(12)
 

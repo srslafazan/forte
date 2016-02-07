@@ -1,36 +1,39 @@
-<div class='feedback-title-banner'; style='padding:2rem'>
-    <h8>Feedback</h8>
+<div class='feedback-title-banner'>
+    <h1>Feedback</h1>
 </div>
 
 <div class="forte-feedback-banner">
-    <h7>How was your last lesson?</h7>
+    <h6>How was your last lesson?</h6>
 </div>
 
 <div class='feedback-content'>
-    <div class = 'feedback-main-image'>
-        <img src="http://placehold.it/200x200">
-    </div>
-
-    <label for="title">Name | Date</label>
-    <textarea name="title">Enter commitment, goals, etc...</textarea>   
-    <div>
-        <label class="label-switch">
-        <input type="checkbox" checked=true />
-        <div class="checkbox">
-            <span class='switch-label switch-label-student'>Default</span>
-            <span class='switch-label switch-label-teacher'>Anon.</span>
+    <form action='' method='post'>
+        
+        <div class = 'feedback-main-image'>
+            <img src="http://placehold.it/200x200">
         </div>
-        </label>
-    </div>
-    <br>
-    <button>Submit Feedback</button>
 
+        <label for="title" class='feedback-name-date'>Name | Date</label>
+        <textarea name="title">Enter commitment, goals, etc...</textarea>   
+        <div>
+            <label class="label-switch feedback-switch">
+            <input type="checkbox" checked=true />
+            <div class="checkbox">
+                <span class='switch-label switch-label-student'>Default</span>
+                <span class='switch-label switch-label-teacher'>Anon.</span>
+            </div>
+            </label>
+        </div>
+        <br>
+        <input type='submit' class='forte-submit' value='Submit Feedback'></input>
+
+    </form>
 </div>
 
 <br>
 
 <div class="forte-feedback-banner">
-    <h7>Previous Feedback</h7>
+    <h6>Previous Feedback</h6>
 </div>
 
 <div class='feedback-content'>
@@ -38,8 +41,12 @@
         <img src="http://placehold.it/200x200">
     </div>
 
-    <label for="title">Name | Date</label>
-    <textarea name="title">Enter commitment, goals, etc...</textarea>   
+    <form action='' method='post'>
+
+        <label for="title" class='feedback-name-date'>Name | Date</label>
+        <textarea name="title">Enter commitment, goals, etc...</textarea>   
+
+    </form>
 </div>
 
 <div class='feedback-content'>
@@ -47,8 +54,12 @@
         <img src="http://placehold.it/200x200">
     </div>
 
-    <label for="title">Name | Date</label>
-    <textarea name="title">Enter commitment, goals, etc...</textarea>   
+    <form action='' method='post'>
+
+        <label for="title" class='feedback-name-date'>Name | Date</label>
+        <textarea name="title">Enter commitment, goals, etc...</textarea>   
+
+    </form>
 </div>
 
 <div class="pagination">
