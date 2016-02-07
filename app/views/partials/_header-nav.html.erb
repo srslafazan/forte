@@ -23,10 +23,11 @@
                             <div class="modal-header-img">
                                 <div class="modal-close" for="modal-1"></div>
                                 <p>
-                                    Don't have an account? <span><a href="/register">Sign Up!</a></span>
+                                    Don't have an account? <span><a href="/finish_profile">Sign Up!</a></span>
                                 </p>
                             </div>
-                            <form class="forte-form modal-intro" action="index.html" method="post">
+                            <form class="forte-form modal-intro" action="/login" method="post">
+                                <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
                                 <div class="forte-row">
                                     <input type="text" name="email" class="forte-input" placeholder="Email">
                                     <input type="password" name="password" class="forte-input" placeholder="Password">
@@ -62,10 +63,11 @@
                             <div class="modal-header-img">
                                 <div class="modal-close" for="modal-mobile"></div>
                                 <p>
-                                    Don't have an account? <span><a href="/register">Sign Up!</a></span>
+                                    Don't have an account? <span><a href="/finish_profile">Sign Up!</a></span>
                                 </p>
                             </div>
-                            <form class="forte-form modal-intro" action="index.html" method="post">
+                            <form class="forte-form modal-intro" action="/login" method="post">
+                                <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
                                 <div class="forte-row">
                                     <input type="text" name="email" class="forte-input" placeholder="Email">
                                     <input type="password" name="password" class="forte-input" placeholder="Password">

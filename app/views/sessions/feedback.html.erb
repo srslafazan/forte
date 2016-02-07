@@ -8,6 +8,7 @@
 
 <div class='feedback-content'>
     <form action='' method='post'>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
         
         <div class = 'feedback-main-image'>
             <img src="http://placehold.it/200x200">
@@ -42,7 +43,8 @@
     </div>
 
     <form action='' method='post'>
-
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+        
         <label for="title" class='feedback-name-date'>Name | Date</label>
         <textarea name="title">Enter commitment, goals, etc...</textarea>   
 
@@ -55,6 +57,7 @@
     </div>
 
     <form action='' method='post'>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
         <label for="title" class='feedback-name-date'>Name | Date</label>
         <textarea name="title">Enter commitment, goals, etc...</textarea>   

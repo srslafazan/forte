@@ -1,5 +1,6 @@
 <form action='' method='post' class='forte-form' id='finish-your-profile-form'>
-
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+	
 	<h1>Finish Creating Your Profile</h1>
 	<h6>Your finished profile will be sent to the Forte team for review.</h6>
 
@@ -60,9 +61,9 @@
 			<input type="text" class='forte-input'>
 		</div>
 		<div id='finish-select-instruments'>
-			<button>Guitar</button>
-			<button>Clarinet</button>
-			<button>Piano</button>
+			<button onClick="">Guitar</button>
+			<button onClick="">Clarinet</button>
+			<button onClick="">Piano</button>
 			<input type="text" placeholder="Start typing" id='finish-instrument-search' class='forte-input'>
 			<p class='forte-p-small'>
 				Enter instruments that you want to learn, but that are currently unavailable on Forte here, so we can improve your experience in the future.

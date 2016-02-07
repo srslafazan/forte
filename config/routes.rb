@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'involve' => 'sessions#involve'
   get 'finish_profile' => 'sessions#finish_profile'
   get 'profile' => 'sessions#profile'
-  get 'edit_profile' => 'sessions#edit_profile'
+  get 'edit_profile' => 'sessions#profile'
   get 'dashboard' => 'sessions#dashboard'
   get 'feedback' => 'sessions#feedback'
   get 'payments' => 'sessions#payments'
@@ -17,6 +17,20 @@ Rails.application.routes.draw do
   # Temporary pages
   get 'components' => 'sessions#components'
   
+  get 'sitemap' => 'sessions#sitemap'
+  
+  get 'login' => 'sessions#dashboard'
+  post 'login' => 'sessions#dashboard'
+  
+  post 'register' => 'sessions#finish_profile'
+  get 'register' => 'sessions#finish_profile'
+  
+  post 'finish_profile' => 'sessions#profile'
+  post 'edit_profile' => 'sessions#profile'
+
+  post 'feedback' => 'sessions#feedback'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   # Serve websocket cable requests in-process
