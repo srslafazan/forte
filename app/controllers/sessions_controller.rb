@@ -40,4 +40,8 @@ class SessionsController < ApplicationController
     # style buttons, links, typography, and other components on this page
   end
 
+  def sitemap
+
+  end
+
 end
