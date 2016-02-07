@@ -1,5 +1,63 @@
-<h1>Sessions#feedback</h1>
-<p>Find me in app/views/sessions/feedback.html.erb</p>
+<div class='feedback-title-banner'; style='padding:2rem'>
+    <h8>Feedback</h8>
+</div>
+
+<div class="forte-feedback-banner">
+    <h7>How was your last lesson?</h7>
+</div>
+
+<div class='feedback-content'>
+    <div class = 'feedback-main-image'>
+        <img src="http://placehold.it/200x200">
+    </div>
+
+    <label for="title">Name | Date</label>
+    <textarea name="title">Enter commitment, goals, etc...</textarea>   
+    <div>
+        <label class="label-switch">
+        <input type="checkbox" checked=true />
+        <div class="checkbox">
+            <span class='switch-label switch-label-student'>Default</span>
+            <span class='switch-label switch-label-teacher'>Anon.</span>
+        </div>
+        </label>
+    </div>
+    <br>
+    <button>Submit Feedback</button>
+
+</div>
+
+<br>
+
+<div class="forte-feedback-banner">
+    <h7>Previous Feedback</h7>
+</div>
+
+<div class='feedback-content'>
+    <div class = 'feedback-main-image'>
+        <img src="http://placehold.it/200x200">
+    </div>
+
+    <label for="title">Name | Date</label>
+    <textarea name="title">Enter commitment, goals, etc...</textarea>   
+</div>
+
+<div class='feedback-content'>
+    <div class = 'feedback-main-image'>
+        <img src="http://placehold.it/200x200">
+    </div>
+
+    <label for="title">Name | Date</label>
+    <textarea name="title">Enter commitment, goals, etc...</textarea>   
+</div>
+
+<div class="pagination">
+    Page
+    <a href=""><i class="material-icons">chevron_left</i></a>
+    1
+    <a href=""><i class="material-icons">chevron_right</i></a>
+</div>
+
 <script type="text/javascript">
     $(document).ready(function(){
         var menu = true;
