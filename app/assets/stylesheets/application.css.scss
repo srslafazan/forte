@@ -1,12 +1,13 @@
 // NORMALIZE
-@import 'libraries/normalize.css';
+@import 'lib/normalize.css';
 
 // BOURBON, documentation: https://github.com/thoughtbot/bourbon
 @import 'bourbon';
-@import 'libraries/base/base';
+@import 'lib/base/base';
 @import 'neat';
-
-@import 'libraries/nice_select';
+@import 'lib/nice_select';
+@import 'lib/remodal.css';
+@import 'lib/remodal-default-theme.css';
 
 // UTILITY
 @import 'styles/forte-global-mixins';
@@ -15,7 +16,6 @@
 // STYLES
 @import 'styles/components';
 @import 'styles/switch';
-@import 'styles/hover-tile';
 
 @import 'styles/pages';
 @import 'styles/index';

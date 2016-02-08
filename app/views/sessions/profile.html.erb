@@ -87,7 +87,7 @@
 				<input type='text'  name='saturday' class='forte-input' placeholder="8AM-2PM" value='8AM-2PM'>
 			</div>
 
-			<button>Edit Availabilities</button>
+			<button data-remodal-target="availability-picker-modal">Edit Availabilities</button>
 
 		</div>
 
@@ -135,6 +135,11 @@
 		<!-- <a href="" class='forte-link-gray'>Cancel</a> -->
 	<!-- </section> -->
 </form>
+
+
+
+<%= render partial: 'partials/availability-picker-modal' %>
+
 <script type="text/javascript">
     $(document).ready(function(){
         var menu = true;

@@ -11,7 +11,8 @@
             <li><a href="/contact" class="animating-link">Contact Us</a></li>
             <li><a class="forte-nav-link-bordered" href="/involve">Get Involved</a></li>
             <li>
-                <div class="modal">
+                <a data-remodal-target="log-in-modal">Log in</a>
+      <!--           <div class="modal">
                     <label for="modal-1">
                         <div class="modal-trigger">
                             <span  class="animating-link">Log In</span>
@@ -23,7 +24,7 @@
                             <div class="modal-header-img">
                                 <div class="modal-close" for="modal-1"></div>
                                 <p>
-                                    Don't have an account? <span><a href="/finish_profile">Sign Up!</a></span>
+                                    Don't have an account? <span><a data-remodal-target="sign-up-modal">Sign Up!</a></span>
                                 </p>
                             </div>
                             <form class="forte-form modal-intro" action="/login" method="post">
@@ -36,7 +37,7 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </li>
         </ul>
         <div class="mobile-nav">
@@ -51,7 +52,9 @@
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/register">Sign Up</a></li>
             <li>
-                <div class="modal">
+                <a data-remodal-target="log-in-modal">Log in</a>
+
+          <!--       <div class="modal">
                     <label for="modal-mobile">
                         <div class="modal-trigger">
                             <span>Log In</span>
@@ -63,7 +66,7 @@
                             <div class="modal-header-img">
                                 <div class="modal-close" for="modal-mobile"></div>
                                 <p>
-                                    Don't have an account? <span><a href="/finish_profile">Sign Up!</a></span>
+                                    Don't have an account? <a data-remodal-target="sign-up-modal">Sign Up!</a>
                                 </p>
                             </div>
                             <form class="forte-form modal-intro" action="/login" method="post">
@@ -76,8 +79,12 @@
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </li>
         </ul>
     </div>
 </header>
+
+
+<%= render partial: 'partials/sign-up-modal' %>
+<%= render partial: 'partials/log-in-modal' %>

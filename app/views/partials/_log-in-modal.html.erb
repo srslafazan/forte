@@ -1,0 +1,20 @@
+<div class="remodal" data-remodal-id="log-in-modal">
+
+    <section id="sign-in-modal-upper">
+        <%= image_tag('forte_logo_not_logged.gif') %>
+    </section>
+    <section id="sign-in-modal-lower">
+        <form action='/login' method='post'>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+        
+            <input type='text'  name='email' class='forte-input' placeholder="Email">
+            <input type='password'  name='password' class='forte-input' placeholder="Password">
+
+            <input type='submit' value='Sign up'>
+            <p class='forte-p-small' id='sign-up-modal-cancel'>
+                <a href="" data-remodal-action="cancel" class='forte-link-gray'>Cancel</a>
+            </p>
+        </form>
+
+    </section>
+</div>

@@ -1,4 +1,4 @@
-<div class='forte-availability-picker'>
+<div class='forte-availability-picker remodal' data-remodal-id="availability-picker-modal">
 	<div class='availability-column-left'>
 		<div class="availability-cell-label"></div>
 		<div class="availability-cell-label">
@@ -223,30 +223,28 @@
 		<div class="availability-cell-label">
 			<p>9PM</p>
 		</div>
-	</div>
+
 
 
 	<input type='hidden' name='availabilities' value=''>
+
+
+	</div>
+
+
+	<button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+  <button data-remodal-action="confirm" class="remodal-confirm">Confirm</button>
 
 </div>	
 
 <script type="text/javascript">
 $(document).ready(function(){	
 		
-		var paint = true;
-	  var isDown = false;   // Tracks status of mouse button
-
 		$('.availability-cell').mousedown(function(){
-			
-
-			// set paint color on mousedown
-			$(this).hasClass('availability-cell-highlighted') ? paint = false : paint = true;
-
-			// toggle triggering cell color
 			$(this).toggleClass('availability-cell-highlighted');
-			
 		});
 
+	  var isDown = false;   // Tracks status of mouse button
 
 	  $(document).mousedown(function() {
 	    isDown = true;      // When mouse goes down, set isDown to true
@@ -257,8 +255,7 @@ $(document).ready(function(){
 
 	  $(".availability-cell").mouseover(function(){
 	    if(isDown) {        // Only change css if mouse is down
-	    	// paint in one color or another based on 
-	    	paint ? $(this).addClass('availability-cell-highlighted') : $(this).removeClass('availability-cell-highlighted');
+	       $(this).toggleClass('availability-cell-highlighted');
 	    }
 	  });
 

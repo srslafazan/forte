@@ -1,4 +1,6 @@
 <form id='contact-us-form' action='' method='post' class='forte-form'>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+    
 	<h2>Any questions or suggestions? We're all ears.</h2>
 	<input type='text'  name='first_name' class='forte-input' placeholder="First Name">
 	<input type='text'  name='last_name' class='forte-input' placeholder="Last Name">
