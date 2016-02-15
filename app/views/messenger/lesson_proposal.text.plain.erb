@@ -1,0 +1,23 @@
+<%= @message_info[:first_name]%>,
+
+We found a [student/teacher] that we think will be a perfect match – {Student/Teacher name link to their profile}! Please let us know if you’re interested in a [instrument] lesson at [2:00PM on Sunday, January 1st] at [Emily’s residence]. Please select one of the options below within the next 24 hours.
+
+User clicks either “Yes” or one of the three “No” options within email.  Links them to a page where they explain their decision.
+{Yes! I’d love to}
+Students - at webpage: Perfect!  [Show lesson confirmation email text here – “your lesson with X is confirmed for…]
+I can’t because:
+{I am unavailable at this time.}
+At webpage: Not a problem – please revise your availability on your {profile} and we’ll get back to you ASAP!
+We should consider a page in which the teacher/student has the option to suggest a specific time based on the overlap of their respective schedules
+{I am not interested in working with [Emily]}
+At webpage: Not a problem – we will get back to you with another proposal ASAP!
+{Other}
+Please describe your reason so we can improve your future lesson proposals. [textbox]
+
+<% if @message_info[:role] == 'student' %>
+    As a reminder, our lessons last 45 minutes and cost [“$15 for sessions held at the teacher’s residence” or “$20 for sessions held at your residence"].  Don’t worry - you won’t be billed until after your lesson.
+<% else %>
+    As a reminder, our lessons last 45 minutes and you can earn [“$10 for sessions at your residence” or “$15 for sessions at the student’s residence”].  If you prefer to teach as an unpaid volunteer, you may generously donate this amount to Forte and help us expand to reach more underprivileged students!
+<% end %>
+
+The Forte Team
