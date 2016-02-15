@@ -1,14 +1,15 @@
 class EvaluationsController < ApplicationController
-    before_action :require_login, except: [] #add to exceptions when needed
+    # before_action :require_login, except: [] #add to exceptions when needed
 
+    def index # feedback.html.erb
+    end
+    
     def create
         Evaluation.create(evaluation_params)
         # redirect_to 'feedback page or dashboard (from modal)'
     end
 
-    def show # feedback.html.erb
 
-    end
     
     private
         def evaluation_params

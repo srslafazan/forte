@@ -1,35 +1,23 @@
 Rails.application.routes.draw do
 
-  # For page organization information, refer to the Forte Web Structure and Components guide on Slack.
-  get '/' => 'sessions#index'
+  root 'sessions#index'
   get 'about' => 'sessions#about'
   get 'contact' => 'sessions#contact'
   get 'involve' => 'sessions#involve'
-  get 'finish_profile' => 'sessions#finish_profile'
-  get 'profile' => 'sessions#profile'
-  get 'edit_profile' => 'sessions#profile'
-  get 'dashboard' => 'sessions#dashboard'
-  get 'feedback' => 'sessions#feedback'
-  get 'payments' => 'sessions#payments'
-  get 'support' => 'sessions#support'
+  get 'sitemap' => 'sessions#sitemap'
+
+  resources :questions
+  resources :evaluations
+  resources :transactions
+  
+  resources :students do
+    get 'feedback' => 'students#feedback'
+    get 'dashboard' => 'students#dashboard'
+  end
 
 
   # Temporary pages
   get 'components' => 'sessions#components'
-  
-  get 'sitemap' => 'sessions#sitemap'
-  
-  get 'login' => 'sessions#dashboard'
-  post 'login' => 'sessions#dashboard'
-  
-  post 'register' => 'sessions#finish_profile'
-  get 'register' => 'sessions#finish_profile'
-  
-  post 'finish_profile' => 'sessions#profile'
-  post 'edit_profile' => 'sessions#profile'
-
-  post 'feedback' => 'sessions#feedback'
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
