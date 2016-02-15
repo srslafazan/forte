@@ -15,18 +15,6 @@ class SessionsController < ApplicationController
   def involve # Get Involved
   end
 
-  def finish_profile # Finish your Forte Profile
-  end
-
-  def profile # Profile
-  end
-
-  def edit_profile # Edit Profile
-  end
-
-  def feedback # Feedback
-  end
-
   def payments # Payments
   end
 

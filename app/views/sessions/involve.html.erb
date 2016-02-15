@@ -4,9 +4,9 @@
 		<p id='get-involved-learn-tagline' class='forte-p-overlay forte-p-medium'>Sign up to start<br>learning instruments now</p>
 		<p id='get-involved-teach-tagline' class='forte-p-overlay forte-p-medium'>Sign up to start<br>teaching students now</p>
 		<div class="tile-overlay-maroon tile-overlay-maroon-left"></div>
-		<button id='get-involved-learn-button'class='forte-button-round-small forte-button-overlay'>Learn</button>
+		<button data-remodal-target='sign-up-modal' id='get-involved-learn-button'class='forte-button-round-small forte-button-overlay'>Learn</button>
 		<div class="tile-overlay-maroon tile-overlay-maroon-right"></div>
-		<button id='get-involved-teach-button'class='forte-button-round-small forte-button-overlay'>Teach</button>
+		<button data-remodal-target='sign-up-modal' id='get-involved-teach-button'class='forte-button-round-small forte-button-overlay'>Teach</button>
 	</div>
 	<div id="get-involved-right"></div>
 </section>
@@ -18,6 +18,12 @@
 
 	<button onClick=''>Donate</button>
 </section>
+
+
+
+<%= render partial: 'partials/log-in-modal' %>
+<%= render partial: 'partials/sign-up-modal' %>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		var menu = true;

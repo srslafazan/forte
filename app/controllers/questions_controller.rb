@@ -1,5 +1,11 @@
 class QuestionsController < ApplicationController
 
+    def index
+    end
+
+    def new
+    end
+
     def create
         question_params
         Questions.create(subject:params[:subject], message:params[:message], sender_email:session[:email])

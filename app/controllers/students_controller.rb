@@ -1,5 +1,11 @@
 class StudentsController < ApplicationController
-    before_action :require_login, except: [:login, :create] # add to exceptions when needed
+    # before_action :require_login, except: [:login, :create] # add to exceptions when needed
+
+    def index
+    end
+
+    def new
+    end
 
     def create
         Student.basic_signup(student_basic_params)
@@ -35,11 +41,12 @@ class StudentsController < ApplicationController
     end
 
     def show # profile.html.erb
-
     end
 
     def edit # edit_profile.html.erb
+    end
 
+    def dashboard
     end
 
 
