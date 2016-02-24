@@ -9,9 +9,9 @@
   user-select: none;
 }
 
-.label-switch { 
+.label-switch {
   @include no-select; // mixin to disble text selection
-  $action-color: #8D2131;
+  $action-color: $forte-orange;
   $base-background-color: white !default;
   $switch-width: 150px; // affects width
   $switch-padding: 2px;
@@ -91,5 +91,3 @@
   height: 16px;
   margin: 6px 14px 0 0;
 }
-
-

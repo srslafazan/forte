@@ -21,6 +21,12 @@ class SessionsController < ApplicationController
   def support # Support
   end
 
+  def privacy
+  end
+
+  def terms
+  end
+
 
   # Temporary Pages
 
