@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'contact' => 'sessions#contact'
   get 'involve' => 'sessions#involve'
   get 'sitemap' => 'sessions#sitemap'
+  get 'privacy-policy' => 'sessions#privacy'
+  get 'terms-and-conditions' => 'sessions#terms'
 
   resources :questions
   resources :evaluations
