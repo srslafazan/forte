@@ -8,11 +8,24 @@ class StudentsController < ApplicationController
     end
 
     def create
-        Student.basic_signup(student_basic_params)
+        # Student.basic_signup(student_basic_params)
         # add function to Student model
         # session[:email] = params[:email] -> set in Model or controller?
         # set session[:email] with unique email address
-        # redirect_to 'finish profile'
+        # @message_info = params[:student]
+        error = false
+        if error
+            redirect_to 'students/new'
+        else
+            @message_info = params
+            @message_info[:first_name] = "Student Kelly"
+            @message_info[:email] = "kellybhoward@gmail.com"
+            @message_info[:role] = "learning"
+            @message_info[:time_frame] = "72 hours"
+            Messenger.application_received(@message_info).deliver
+            redirect_to '/students/1'
+        end
+
     end
 
     def update

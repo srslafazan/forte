@@ -3,7 +3,7 @@
         <h1>
             We connect experienced teachers with aspiring youth musicians to provide affordable music lessons for those who need it most.
         </h1>
-        
+
         <button data-remodal-target="sign-up-modal" class="first forte-button-overlay">Learn</button>
         <button data-remodal-target="sign-up-modal" class="forte-button-overlay">Teach</button>
     </div>
@@ -21,24 +21,24 @@
                         <%= image_tag("piano.gif", class: 'instrument') %>
                         <div class="label-card">
                             <h3>Piano</h3>
-                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='involve'">Learn</button>
-                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='involve'">Teach</button>
+                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='/students/new'">Learn</button>
+                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='/tutors/new'">Teach</button>
                         </div>
                     </li>
                     <li>
                         <%= image_tag("guitar.gif", class: 'instrument') %>
                         <div class="label-card">
                             <h3>Guitar</h3>
-                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='involve'">Learn</button>
-                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='involve'">Teach</button>
+                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='/students/new'">Learn</button>
+                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='/tutors/new'">Teach</button>
                         </div>
                     </li>
                     <li>
                         <%= image_tag("clarinet.gif", class: 'instrument') %>
                         <div class="label-card">
                             <h3>Clarinet</h3>
-                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='involve'">Learn</button>
-                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='involve'">Teach</button>
+                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='/students/new'">Learn</button>
+                            <button class='forte-button-round-small forte-button-overlay' onClick="location.href='/tutors/new'">Teach</button>
                         </div>
                     </li>
                     <li>
@@ -140,6 +140,3 @@
 
 <%= render partial: 'partials/log-in-modal' %>
 <%= render partial: 'partials/sign-up-modal' %>
-
-
-

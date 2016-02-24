@@ -9,12 +9,16 @@ Rails.application.routes.draw do
   resources :questions
   resources :evaluations
   resources :transactions
-  
+
   resources :students do
     get 'feedback' => 'students#feedback'
     get 'dashboard' => 'students#dashboard'
   end
 
+  resources :tutors do
+    get 'feedback' => 'tutors#feedback'
+    get 'dashboard' => 'tutors#dashboard'
+  end
 
   # Temporary pages
   get 'components' => 'sessions#components'
