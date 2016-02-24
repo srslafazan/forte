@@ -13,16 +13,20 @@ class StudentsController < ApplicationController
         # session[:email] = params[:email] -> set in Model or controller?
         # set session[:email] with unique email address
         # @message_info = params[:student]
+        @student = Student.new(student_params)
+        puts "alpha"
+        puts @student.first_name
+        puts "beta"
         error = false
         if error
             redirect_to 'students/new'
         else
-            @message_info = params
-            @message_info[:first_name] = "Student Kelly"
-            @message_info[:email] = "kellybhoward@gmail.com"
-            @message_info[:role] = "learning"
-            @message_info[:time_frame] = "72 hours"
-            Messenger.application_received(@message_info).deliver
+            # @message_info = params
+            # @message_info[:first_name] = "Student Kelly"
+            # @message_info[:email] = "kellybhoward@gmail.com"
+            # @message_info[:role] = "learning"
+            # @message_info[:time_frame] = "72 hours"
+            # Messenger.application_received(@message_info).deliver
             redirect_to '/students/1'
         end
 
@@ -64,11 +68,7 @@ class StudentsController < ApplicationController
 
 
     private
-        def student_basic_params
-            params.require(:student).permit("email", "first_name", "last_name")
-        end
-        def student_params
-            #add the rest of potential updating attributes
-            params.require(:student).permit("email", "first_name", "last_name")
-        end
+    def student_params
+        params.require(:student).permit("first_name", "last_name", "email", "password", "password_confirmation", "phone_number")
+    end
 end
