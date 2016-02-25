@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   resources :transactions
   
   resources :students do
-    get 'feedback' => 'students#feedback'
-    get 'dashboard' => 'students#dashboard'
+    get '/feedback' => 'students#feedback'
+    get '/dashboard' => 'students#dashboard'
   end
 
 
