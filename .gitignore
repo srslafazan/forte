@@ -24,3 +24,6 @@
 app/.DS_Store
 app/assets/.DS_Store
 app/assets/stylesheets/.DS_Store
+
+#Ignore local env variables - don't want you to have my gmail credentials
+/config/local_env.yml

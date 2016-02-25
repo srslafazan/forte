@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Forte Academy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
+    <head>
+        <title>Forte Academy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <%= csrf_meta_tags %>
+        <%= action_cable_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= favicon_link_tag 'favicon.ico' %>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="screen"/>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-</head>
-<body>
-    <%= render partial: "partials/header-nav" %>
-    <main>
-        <%= yield %>
-    </main>
-    <footer></footer>
-</body>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= favicon_link_tag 'favicon.ico' %>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="screen"/>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    </head>
+    
+    <body>
+        <%= render partial: "partials/header-nav" %>
+        <main>
+            <%= yield %>
+        </main>
+        
+        <%=  render partial: "partials/footer" %>
+    </body>
 </html>

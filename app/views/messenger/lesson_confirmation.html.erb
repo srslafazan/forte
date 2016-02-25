@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    </head>
+    <body>
+        <p>
+            <%= @message_info[:first_name]%>,
+        </p>
+        <p>
+            [Teachers: “It’s a match!”] Your lesson with [Emily] is confirmed for [2PM on Sunday, January 1st] at [Emily’s residence]. Please don’t forget to bring your instrument, stand and any relevant sheet music!
+            Student: If you have any questions ahead of the lesson, feel free to contact Emily at [contact information].
+            Teacher: If you would like to introduce yourself or provide any instructions for your student to prepare, feel free to contact Emily at [contact information].
+        </p>
+        <p>
+            <% if @message_info[:role] == 'student' %>
+                As a reminder, our lessons last 45 minutes and cost [“$15 for sessions held at the teacher’s residence” or “$20 for sessions held at your residence"].  Don’t worry - you won’t be billed until after your lesson.
+            <% else %>
+                As a reminder, our lessons last 45 minutes and you can earn [“$10 for sessions at your residence” or “$15 for sessions at the student’s residence”].  If you prefer to teach as an unpaid volunteer, you may generously donate this amount to Forte and help us expand to reach more underprivileged students!
+            <% end %>
+        </p>
+        <p>
+            The Forte Team
+        </p>
+    </body>
+</html>

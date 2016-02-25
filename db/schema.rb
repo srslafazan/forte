@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224041227) do
+ActiveRecord::Schema.define(version: 20160224022030) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "addressable_type"
@@ -120,8 +120,13 @@ ActiveRecord::Schema.define(version: 20151224041227) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.integer  "phone_number"
   end
 
   create_table "time_blocks", force: :cascade do |t|

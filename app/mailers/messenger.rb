@@ -6,9 +6,9 @@ class Messenger < ActionMailer::Base
   #
   #   en.messenger.gmail_message.subject
   #
-  def application_received(message)
-    @message = message
-    mail(to: "kellybhoward@gmail.com", subject: "Welcome to Forte!")
+  def application_received(message_info)
+    @message_info = message_info
+    mail(to: "#{@message_info[:email]}", subject: "Welcome to Forte!")
   end
 
   def application_accepted(message)
@@ -23,27 +23,27 @@ class Messenger < ActionMailer::Base
 
   def lesson_proposal(message)
     @message = message
-    mail(to: "kellybhoward@gmail.com", subject: "Portfolio: #{@message[:reason]}")
+    mail(to: "kellybhoward@gmail.com", subject: "Lesson Proposal with [Emily]!")
   end
 
   def lesson_confirmation(message)
     @message = message
-    mail(to: "kellybhoward@gmail.com", subject: "Portfolio: #{@message[:reason]}")
+    mail(to: "kellybhoward@gmail.com", subject: "Confirmed Lesson with [Emily]! ")
   end
 
   def lesson_reminder(message)
     @message = message
-    mail(to: "kellybhoward@gmail.com", subject: "Portfolio: #{@message[:reason]}")
+    mail(to: "kellybhoward@gmail.com", subject: "Lesson Tomorrow with [Emily]!")
   end
 
   def lesson_summary(message)
     @message = message
-    mail(to: "kellybhoward@gmail.com", subject: "Portfolio: #{@message[:reason]}")
+    mail(to: "kellybhoward@gmail.com", subject: "Your [date] Lesson with [Emily] ")
   end
 
   def forgot_password(message)
     @message = message
-    mail(to: "kellybhoward@gmail.com", subject: "Portfolio: #{@message[:reason]}")
+    mail(to: "kellybhoward@gmail.com", subject: "Your Forte Account Information")
   end
 
 end

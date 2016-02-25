@@ -1,26 +1,27 @@
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-  <style>
-  /*#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }*/
-  
-  /*#sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }*/
-  
-  /*html > body #sortable li { height: 1.5em; line-height: 1.2em; }*/
-  /*.ui-state-highlight { height: 1.5em; line-height: 1.2em; }*/
-  </style>
-  <script>
-  $(function() {
-    $( "#sortable" ).sortable({
-      placeholder: "ui-state-highlight"
-    });
-    $( "#sortable" ).disableSelection();
+<style>
+/*#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }*/
+
+/*#sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }*/
+
+/*html > body #sortable li { height: 1.5em; line-height: 1.2em; }*/
+/*.ui-state-highlight { height: 1.5em; line-height: 1.2em; }*/
+</style>
+<script>
+$(function() {
+  $( "#sortable" ).sortable({
+    placeholder: "ui-state-highlight"
   });
-  </script>
+  $( "#sortable" ).disableSelection();
+});
+</script>
 
-<form action='finish_profile' method='post' class='forte-form' id='finish-your-profile-form'>
+<form action='/students' method='post' class='forte-form' id='finish-your-profile-form'>
+
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-	
-	<h1>Finish Creating Your Profile</h1>
+
+	<h1>Complete Your Application</h1>
 	<h6>Your finished profile will be sent to the Forte team for review.</h6>
 
 	<section id='profile-section'>
@@ -46,15 +47,19 @@
 			 </div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Re-type Password</label>
+
 				<input type='password'  name='confirm_password' class='forte-input' placeholder="Re-type Password">
+
+				<input type='text'  name='password_confirmation' class='forte-input' placeholder="Re-type Password">
+
 			</div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Phone Number</label>
-				<input type='text'  name='phone' class='forte-input' placeholder="Phone Number">
+				<input type='text'  name='phone_number' class='forte-input' placeholder="Phone Number">
 			</div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Birthdate</label>
-				<input type='text'  name='birthdate' class='forte-input' placeholder="Birthdate">
+				<input type='date'  name='birthdate' class='forte-input' placeholder="Birthdate">
 			 </div>
 		</div>
 
