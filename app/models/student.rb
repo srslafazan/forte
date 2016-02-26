@@ -1,4 +1,5 @@
 class Student < ApplicationRecord
+  has_secure_password
   has_many :dreams
   has_many :mentorships
   has_many :lessons, through: :mentorships
