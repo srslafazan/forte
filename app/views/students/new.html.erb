@@ -1,4 +1,24 @@
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<style>
+/*#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }*/
+
+/*#sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }*/
+
+/*html > body #sortable li { height: 1.5em; line-height: 1.2em; }*/
+/*.ui-state-highlight { height: 1.5em; line-height: 1.2em; }*/
+</style>
+<script>
+$(function() {
+  $( "#sortable" ).sortable({
+    placeholder: "ui-state-highlight"
+  });
+  $( "#sortable" ).disableSelection();
+});
+</script>
+
 <form action='/students' method='post' class='forte-form' id='finish-your-profile-form'>
+
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
 	<h1>Complete Your Application</h1>
@@ -42,34 +62,23 @@
 	</section>
 
 	<section id='finish-instruments-you-want-to-learn'>
+		<button id='finish-instrument-list-add'><i class="material-icons">add</i></button>
 		<h4>Instrument(s) you want to learn</h4>
-		<div id='finish-instrument'>
-			<h6>Instrument</h6>
-		</div>
-		<div id='finish-experience'>
-			<h6>Experience level</h6>
-
-			<select class='change' name='instrument[skill]'>
-				<option value="beginner">Beginner</option>
-				<option value="intermediate">Intermediate</option>
-				<option value="advanced">Advanced</option>
-			</select>
-
-		</div>
-		<div id='finish-years'>
-			<h6>Years played</h6>
-			<input type="text" class='forte-input'>
-		</div>
-		<div id='finish-select-instruments'>
-			<button onClick="">Guitar</button>
-			<button onClick="">Clarinet</button>
-			<button onClick="">Piano</button>
-			<input type="text" placeholder="Start typing" id='finish-instrument-search' class='forte-input'>
-			<p class='forte-p-small'>
-				Enter instruments that you want to learn, but that are currently unavailable on Forte here, so we can improve your experience in the future.
-			</p>
+		<div>
+			<div id='finish-instrument'>
+				<h6>Instrument</h6>
+			</div>
+			<div id='finish-experience'>
+				<h6>Experience level</h6>
+			</div>
+			<div id='finish-years'>
+				<h6>Years played</h6>
+			</div>
 		</div>
 
+		<ul id="sortable" class='finish-instrument-picker'>
+		  
+		  <%= render partial: 'partials/instrument-picker-row' %>
 	</section>
 
 	<section id='finish-home-address'>
@@ -176,9 +185,9 @@
 		<textarea></textarea>
 	</section>
 
-	<section id='finish-link-social'>
+<!-- 	<section id='finish-link-social'>
 		<h4>Link your social profiles</h4>
-	</section>
+	</section> -->
 
 	<section id='finish-save'>
 		<input type='submit' class='forte-submit' value='Save & Finish'>
@@ -186,6 +195,9 @@
 	</section>
 
 </form>
+
+
+
 <script type="text/javascript">
     $(document).ready(function(){
         var menu = true;
@@ -226,5 +238,38 @@
             e.stopPropagation();
             });
         });
+
+
+      // var InstrumentPicker = document.getElementById('sortable');
+      
+      var InstrumentPicker = {
+
+      	instruments: [],
+      	numberOfRows: 1,
+
+      };
+
+      $(document).on('click', '#finish-instrument-list-add', function(e){
+      	e.preventDefault();
+      	console.log('clicked add');
+      	if ( InstrumentPicker.numberOfRows < 3 ) {
+	      	$('#sortable').append($('#instrument-template-row').clone());
+	      	InstrumentPicker.numberOfRows++;
+      	}
+      });
+
+      $(document).on('click', '#finish-instrument-list-delete', function(e){
+      	e.preventDefault();
+      	console.log('clicked delete');
+      	if ( InstrumentPicker.numberOfRows > 1 ) {
+	      	$(this).parent().parent().remove();
+	      	InstrumentPicker.numberOfRows--;
+      	}
+
+
+      });
+
+
+
     });
 </script>

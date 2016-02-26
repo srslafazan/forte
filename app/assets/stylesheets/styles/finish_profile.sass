@@ -44,27 +44,59 @@
 
 #finish-instruments-you-want-to-learn
 	+finish-section
+	// height: 600px
+	position: relative 
 
 	#finish-instrument
-		@include span-columns(3, $display: block-collapse)
-		height: 400px
-		// background-color: green
+		@include span-columns(4, $display: block-collapse)
+		// height: 400px
 	#finish-experience
-		@include span-columns(2, $display: block-collapse)
-		height: 400px
-		// background-color: orange
+		@include span-columns(4, $display: block-collapse)
+		// height: 400px
 	#finish-years
-		@include span-columns(2, $display: block-collapse)
-		height: 400px
-		input
-			width: 50px
-		// background-color: purple
-	#finish-select-instruments
-		@include span-columns(5, $display: block-collapse)
-		height: 400px
-		// background-color: red
-		#finish-instrument-search
-			margin: 1rem auto 1rem auto
+		@include span-columns(4, $display: block-collapse)
+		// height: 400px
+		// input
+			// width: 50px
+	// #finish-select-instruments
+	// 	@include span-columns(5, $display: block-collapse)
+	// 	height: 400px
+	// 	background-color: red
+	// 	#finish-instrument-search
+	// 		margin: 1rem auto 1rem auto
+#finish-instrument-headings
+
+.finish-instrument-picker
+	li
+		height: 74px
+		padding: 10px
+		background-color: $forte-maroon
+		border: $forte-border-maroon
+		margin-bottom: 2px // offset for extra borders
+
+		position: relative
+
+		@include span-columns(12)
+
+		.finish-instrument-picker-column
+			@include span-columns(4, $display: block-collapse)
+			height: 60px - 4px
+		.finish-instrument-picker-instrument
+			// background-color: yellow
+		.finish-instrument-picker-experience
+			// background-color: green
+		.finish-instrument-picker-years
+			// background-color: orange
+#finish-instrument-list-add
+	position: absolute
+	top: 0
+	right: 0
+	margin: 0
+
+#finish-instrument-list-delete
+	float: right
+	// top: 0px
+	margin-top: 5px
 
 #finish-home-address
 	+finish-section

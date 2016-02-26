@@ -8,37 +8,9 @@
         <ul class="forte-nav">
             <!-- change menu items when logged in and not -->
             <li><a href="/about" class="animating-link">About Us</a></li>
-            <li><a href="/contact" class="animating-link">Contact Us</a></li>
+            <li><a href="/questions/new" class="animating-link">Contact Us</a></li>
             <li><a class="forte-nav-link-bordered" href="/involve">Get Involved</a></li>
-            <li>
-                <a href="" class="animating-link" data-remodal-target="log-in-modal">Log in</a>
-      <!--           <div class="modal">
-                    <label for="modal-1">
-                        <div class="modal-trigger">
-                            <span  class="animating-link">Log In</span>
-                        </div>
-                    </label>
-                    <input class="modal-state" id="modal-1" type="checkbox" />
-                    <div class="modal-fade-screen">
-                        <div class="modal-inner">
-                            <div class="modal-header-img">
-                                <div class="modal-close" for="modal-1"></div>
-                                <p>
-                                    Don't have an account? <span><a data-remodal-target="sign-up-modal">Sign Up!</a></span>
-                                </p>
-                            </div>
-                            <form class="forte-form modal-intro" action="/login" method="post">
-                                <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-                                <div class="forte-row">
-                                    <input type="text" name="email" class="forte-input" placeholder="Email">
-                                    <input type="password" name="password" class="forte-input" placeholder="Password">
-                                </div>
-                                <input type="submit" name="login" class="forte-submit" value="Login">
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
-            </li>
+            <li><a href="" class="animating-link" data-remodal-target="log-in-modal">Log in</a></li>
         </ul>
         <div class="mobile-nav">
             <button type="button" class="mobile-nav-trigger">
@@ -49,38 +21,9 @@
     <div class="mobile-menu">
         <ul>
             <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/questions/new">Contact Us</a></li>
             <li><a href="/involve">Sign Up</a></li>
-            <li>
-                <a href="" data-remodal-target="log-in-modal">Log in</a>
-            </li>
-
-          <!--       <div class="modal">
-                    <label for="modal-mobile">
-                        <div class="modal-trigger">
-                            <span>Log In</span>
-                        </div>
-                    </label>
-                    <input class="modal-state" id="modal-mobile" type="checkbox" />
-                    <div class="modal-fade-screen">
-                        <div class="modal-inner">
-                            <div class="modal-header-img">
-                                <div class="modal-close" for="modal-mobile"></div>
-                                <p>
-                                    Don't have an account? <a data-remodal-target="sign-up-modal">Sign Up!</a>
-                                </p>
-                            </div>
-                            <form class="forte-form modal-intro" action="/login" method="post">
-                                <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
-                                <div class="forte-row">
-                                    <input type="text" name="email" class="forte-input" placeholder="Email">
-                                    <input type="password" name="password" class="forte-input" placeholder="Password">
-                                </div>
-                                <input type="submit" name="login" class="forte-submit" value="Login">
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
+            <li><a href="" data-remodal-target="log-in-modal">Log in</a></li>
         </ul>
     </div>
 </header>
