@@ -1,11 +1,11 @@
 <form id='contact-us-form' action='' method='post' class='forte-form'>
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
     
-	<h2>Any questions or suggestions? We're all ears.</h2>
-	<input type='text'  name='first_name' class='forte-input' placeholder="First Name">
-	<input type='text'  name='last_name' class='forte-input' placeholder="Last Name">
-	<input type='email'  name='email' class='forte-input' placeholder="Email">
-	<textarea></textarea>
+    <h2>Any questions or suggestions? We're all ears.</h2>
+    <input type='text'  name='first_name' class='forte-input' placeholder="First Name">
+    <input type='text'  name='last_name' class='forte-input' placeholder="Last Name">
+    <input type='email'  name='email' class='forte-input' placeholder="Email">
+    <textarea></textarea>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 	<input class='forte-submit' type='submit' value='Submit'>
 </form>
 <script type="text/javascript">
