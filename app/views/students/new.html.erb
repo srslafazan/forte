@@ -17,7 +17,7 @@ $(function() {
 });
 </script>
 
-<form action='/students' method='post' class='forte-form' id='finish-your-profile-form'>
+<form action='/students' method='post' enctype="multipart/form-data" class='forte-form' id='finish-your-profile-form' accept-charset="UTF-8">
 
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
@@ -28,6 +28,8 @@ $(function() {
 		<div id='profile-section-left'>
 			<img id='finish-profile-image' src="http://placehold.it/150x150" alt='image upload'>
 		</div>
+		
+		<input type='file' id="student_avatar" name='student[avatar]' >
 
 		<div id='profile-section-right'>
 			<div class='forte-finish-input'>
