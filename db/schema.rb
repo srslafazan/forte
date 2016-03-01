@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(version: 20160301212847) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "phone_number"
+    t.string   "birthdate"
   end
 
   create_table "time_blocks", force: :cascade do |t|
