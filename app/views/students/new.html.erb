@@ -31,31 +31,27 @@ $(function() {
 		<div id='profile-section-right'>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>First Name</label>
-				<input type='text'  name='first_name' class='forte-input' placeholder="First Name">
+				<input type='text'  name='student[first_name]' class='forte-input' placeholder="First Name">
 			</div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Last Name</label>
-				<input type='text'  name='last_name' class='forte-input' placeholder="Last Name">
+				<input type='text'  name='student[last_name]' class='forte-input' placeholder="Last Name">
 			</div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Email</label>
-				<input type='text'  name='email' class='forte-input' placeholder="Email">
+				<input type='text'  name='student[email]' class='forte-input' placeholder="Email">
 			 </div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Password</label>
-				<input type='password'  name='password' class='forte-input' placeholder="Password">
+				<input type='text'  name='student[password]' class='forte-input' placeholder="Password">
 			 </div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Re-type Password</label>
-
-				<input type='password'  name='confirm_password' class='forte-input' placeholder="Re-type Password">
-
-				<input type='text'  name='password_confirmation' class='forte-input' placeholder="Re-type Password">
-
+				<input type='text' name='student[password_confirmation]' class='forte-input' placeholder="Re-type Password">
 			</div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Phone Number</label>
-				<input type='text'  name='phone_number' class='forte-input' placeholder="Phone Number">
+				<input type='text'  name='student[phone_number]' class='forte-input' placeholder="Phone Number">
 			</div>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Birthdate</label>
@@ -66,7 +62,6 @@ $(function() {
 	</section>
 
 	<section id='finish-instruments-you-want-to-learn'>
-		
 		<button id='finish-instrument-list-add'><i class="material-icons">add</i></button>
 		<h4>Instrument(s) you want to learn</h4>
 		<div>
@@ -84,8 +79,6 @@ $(function() {
 		<ul id="sortable" class='finish-instrument-picker'>
 		  
 		  <%= render partial: 'partials/instrument-picker-row' %>
-
-
 	</section>
 
 	<section id='finish-home-address'>
