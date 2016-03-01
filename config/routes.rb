@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   root 'sessions#index'
+
+  post 'sessions' => 'sessions#create'
   get 'about' => 'sessions#about'
-  # get 'contact' => 'sessions#contact'
   get 'involve' => 'sessions#involve'
   get 'sitemap' => 'sessions#sitemap'
   get 'privacy-policy' => 'sessions#privacy'
