@@ -10,12 +10,11 @@ class StudentsController < ApplicationController
     def create
         @student = Student.new(student_params)
 
-        if @student.valid?
-            redirect_to 'students/new'
-            puts "Epic"
+        if @student.save
+            redirect_to '/students/show'
         else
+            puts @student.errors.full_messages
             redirect_to '/students/new'
-            puts "Epic Fail"
         end
     end
 
@@ -44,10 +43,10 @@ class StudentsController < ApplicationController
         # redirect_to '/'
     end
 
-    def show # profile.html.erb
+    def show
     end
 
-    def edit # edit_profile.html.erb
+    def edit
     end
 
     def dashboard
@@ -56,6 +55,6 @@ class StudentsController < ApplicationController
 
     private
     def student_params
-        params.require(:student).permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone_number)
+        params.require(:student).permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone_number, :birthdate)
     end
 end
