@@ -11,7 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301211154) do
+ActiveRecord::Schema.define(version: 20160301212847) do
+
   create_table "addresses", force: :cascade do |t|
     t.string   "addressable_type"
     t.integer  "addressable_id"
@@ -20,6 +21,13 @@ ActiveRecord::Schema.define(version: 20160301211154) do
   end
 
   add_index "addresses", ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -140,8 +148,6 @@ ActiveRecord::Schema.define(version: 20160301211154) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.string   "phone_number"
-    t.string   "birthdate"
   end
 
   create_table "time_blocks", force: :cascade do |t|

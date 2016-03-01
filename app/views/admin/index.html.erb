@@ -1,0 +1,19 @@
+<div id="admin_login">
+    <div id="login_header"></div>
+
+    <form action='admin_login' method='post'>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+
+        <input type='text'  name='user_id' class='forte-input' placeholder="Admin ID">
+        <input type='password'  name='password' class='forte-input' placeholder="Password">
+
+        <input type='submit' value='Log In'>
+    </form>
+    <div class="error">
+        <% flash.each do |name, msg| %>
+          <% if msg.is_a?(String) %>
+            <%= content_tag :div, msg %>
+          <% end %>
+        <% end %>
+    </div>
+</div>
