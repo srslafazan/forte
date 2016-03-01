@@ -22,6 +22,12 @@ Rails.application.routes.draw do
     get 'dashboard' => 'tutors#dashboard'
   end
 
+  resources :admin
+
+    post 'admin_login' => 'admin#login'
+    get 'admin_dashboard' => 'admin#dashboard'
+    get 'view_student' => 'admin#view_student'
+    get 'view_tutor' => 'admin#view_tutor'
   # Temporary pages
   get 'components' => 'sessions#components'
 
