@@ -1,11 +1,8 @@
 <h1>upload image</h1>
-<!-- <form action='carrierwave' method='post'>
-	<input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' >
-	<input type='file' name='user[avatar]'>
-	<input type='submit' value='Upload'>
-</form>
- -->
+
 <%= form_for @student, url: 'carrierwave', html: { multipart: true } do |form| %>
   <%= form.file_field :avatar %>
   <%= form.submit :submit %>
 <% end %>
+
+<input type='file' name='student[avatar]' >

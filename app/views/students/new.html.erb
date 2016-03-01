@@ -17,7 +17,7 @@ $(function() {
 });
 </script>
 
-<form action='/students' method='post' class='forte-form' id='finish-your-profile-form'>
+<form action='/students' method='post' enctype="multipart/form-data" class='forte-form' id='finish-your-profile-form' accept-charset="UTF-8">
 
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 
@@ -28,37 +28,45 @@ $(function() {
 		<div id='profile-section-left'>
 			<img id='finish-profile-image' src="http://placehold.it/150x150" alt='image upload'>
 		</div>
+		
+		<input type='file' id="student_avatar" name='student[avatar]' >
+
 		<div id='profile-section-right'>
 			<div class='forte-finish-input'>
 				<label class='forte-label'>First Name</label>
 				<input type='text'  name='student[first_name]' class='forte-input' placeholder="First Name">
 			</div>
+
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Last Name</label>
 				<input type='text'  name='student[last_name]' class='forte-input' placeholder="Last Name">
 			</div>
+
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Email</label>
 				<input type='text'  name='student[email]' class='forte-input' placeholder="Email">
 			 </div>
+
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Password</label>
 				<input type='text'  name='student[password]' class='forte-input' placeholder="Password">
 			 </div>
+
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Re-type Password</label>
 				<input type='text' name='student[password_confirmation]' class='forte-input' placeholder="Re-type Password">
 			</div>
+
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Phone Number</label>
 				<input type='text'  name='student[phone_number]' class='forte-input' placeholder="Phone Number">
 			</div>
+
 			<div class='forte-finish-input'>
 				<label class='forte-label'>Birthdate</label>
 				<input type='date'  name='student[birthdate]' class='forte-input' placeholder="Birthdate">
 			 </div>
 		</div>
-
 	</section>
 
 	<section id='finish-instruments-you-want-to-learn'>
