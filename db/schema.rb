@@ -137,13 +137,20 @@ ActiveRecord::Schema.define(version: 20160301212847) do
   add_index "student_lesson_preferences", ["student_id"], name: "index_student_lesson_preferences_on_student_id"
 
   create_table "students", force: :cascade do |t|
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
     t.integer  "phone_number"
+<<<<<<< HEAD
+=======
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+>>>>>>> 75d0249480e8e38b195e24956cfa6a1a6197efe5
   end
 
   create_table "time_blocks", force: :cascade do |t|
@@ -170,8 +177,12 @@ ActiveRecord::Schema.define(version: 20160301212847) do
   add_index "tutor_lesson_preferences", ["tutor_id"], name: "index_tutor_lesson_preferences_on_tutor_id"
 
   create_table "tutors", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
