@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  post 'carrierwave' => 'sessions#carrierwave_create'
+  get 'carrierwave' => 'sessions#carrierwave'
+  get 'carrierwave_success' => 'sessions#carrierwave_success'
 
   root 'sessions#index'
 
