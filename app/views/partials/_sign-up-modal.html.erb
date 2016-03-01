@@ -4,7 +4,7 @@
         <%= image_tag('forte_logo_not_logged.gif') %>
     </section>
     <section id="sign-in-modal-lower">
-        <form action='/register' method='post'>
+        <form action='/students/new' method='get'>
           <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
           
             <input type='text'  name='name' class='forte-input' placeholder="First Name">
