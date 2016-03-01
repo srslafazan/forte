@@ -52,8 +52,8 @@ class StudentsController < ApplicationController
     def dashboard
     end
 
-
     private
+    
     def student_params
         params.require(:student).permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone_number, :birthdate)
     end

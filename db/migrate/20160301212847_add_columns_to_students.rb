@@ -5,6 +5,6 @@ class AddColumnsToStudents < ActiveRecord::Migration[5.0]
 		# add_column :students, :email, :string
 		# add_column :students, :password_digest, :string
 		# add_column :students, :phone_number, :string
-		# add_column :students, :birthdate, :string
+		add_column :students, :birthdate, :string
 	end
 end
