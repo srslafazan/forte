@@ -1,4 +1,3 @@
-require 'carrierwave/orm/activerecord'
 class SessionsController < ApplicationController
   # mount_uploader :avatar, AvatarUploader
   # before_action :require_login, except: [:index, :about, :contact, :involve]
@@ -31,15 +30,10 @@ class SessionsController < ApplicationController
   end
 
   def carrierwave_create
-    puts '\n\n====================='
-    puts student_params[:avatar]
-    puts '=====================\n\n'
-
     @student = Student.create(student_params)
     puts @student.inspect
     puts @student.errors
     puts @student.errors.full_messages
-    
     render 'carrierwave_success'
   end
 
